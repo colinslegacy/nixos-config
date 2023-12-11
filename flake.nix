@@ -14,6 +14,7 @@
       username = "colin";
       name = "Colin";
       email = "colin@colinslegacy.com";
+      wm = "kde";
       browser = "librewolf";
       editor = "emacsclient";
       term = "alacritty";
@@ -30,6 +31,7 @@
           inherit hostname;
           inherit timezone;
           inherit locale;
+          inherit wm;
           inherit allowUnfree;
           inherit pkgsStable;
         };

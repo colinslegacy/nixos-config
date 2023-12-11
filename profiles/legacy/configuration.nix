@@ -2,12 +2,13 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, system, hostname, timezone, locale, allowUnfree, ... }:
+{ config, pkgs, system, hostname, timezone, locale, allowUnfree, wm, ... }:
 
 {
   imports =
     [ # Include the results of the hardware scan.
       ../../system/hardware-configuration.nix
+      (./. + "../../system/wm"+("/"+wm)+".nix") # My window manager
     ];
 
   # Bootloader.
@@ -58,8 +59,8 @@
   users.users.colin.shell = pkgs.zsh;
   programs.zsh.enable = true;
   # Enable the KDE Plasma Desktop Environment.
-  services.xserver.displayManager.sddm.enable = true;
-  services.xserver.desktopManager.plasma5.enable = true;
+  #services.xserver.displayManager.sddm.enable = true;
+  #services.xserver.desktopManager.plasma5.enable = true;
 
   # Configure keymap in X11
   services.xserver = {
