@@ -8,7 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ../../system/hardware-configuration.nix
-      (./. + "../../system/wm"+("/"+wm)+".nix") # My window manager
+      (./. + "../../../system/wm"+("/"+wm)+".nix") # My window manager
     ];
 
   # Bootloader.
