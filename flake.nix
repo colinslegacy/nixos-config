@@ -9,12 +9,15 @@
       profile = "legacy";
       timezone = "America/New_York";
       locale = "en_US.UTF-8";
+      allowUnfree = true;
 
       username = "colin";
       name = "Colin";
       email = "colin@colinslegacy.com";
+      browser = "librewolf";
+      editor = "emacsclient";
+      term = "alacritty";
 
-      allowUnfree = true;
       lib = nixpkgs.lib;
       pkgs = nixpkgs.legacyPackages.${system};
       pkgsStable = nixpkgsStable.legacyPackages.${system};
@@ -40,6 +43,9 @@
           inherit username;
           inherit name;
           inherit email;
+          inherit browser;
+          inherit editor;
+          inherit term;
           inherit allowUnfree;
           inherit pkgsStable;
           inherit nix-doom-emacs;
