@@ -22,6 +22,7 @@
     ../../user/app/doom-emacs/doom-emacs.nix
     ../../user/app/git/git.nix
     ../../user/app/alacritty/alacritty.nix
+    ../defaultPackages.nix
   ];
 
   # This value determines the Home Manager release that your configuration is
@@ -34,29 +35,19 @@
   home.stateVersion = "23.05"; # Please read the comment before changing.
 
   home.packages = [
-    pkgs.element-desktop
-    pkgs.keepassxc
-    pkgs.neofetch
-    pkgs.btop
-    pkgs.discord
     pkgs.steam
     pkgs.runelite
-    pkgs.zsh-syntax-highlighting
     pkgs.eza
     pkgs.duf
     pkgs.cargo
     pkgs.nerdfonts
     pkgs.gcc
     pkgs.gnumake
-    pkgs.alacritty
-    pkgs.spotify
     pkgs.python311Full
-    pkgs.steam-run
     pkgs.gnupg
     pkgs.telegram-desktop
     pkgs.scrcpy
     pkgs.piper
-    pkgs.localsend
     pkgs.fzf
     pkgs.quickemu
     pkgs.nil
@@ -64,17 +55,9 @@
     pkgs.megasync
     pkgs.protontricks
     pkgs.protonup-qt
-    pkgsStable.librewolf
-    pkgs.firefox
-    pkgs.kate
-    pkgs.thunderbird
-    pkgs.ungoogled-chromium
-    pkgs.vlc
     pkgs.nodejs_21
-    pkgs.trash-cli
     pkgs.qbittorrent
     pkgs.pinta
-    pkgs.libsForQt5.kalk
     nix-gaming.packages.${pkgs.system}.star-citizen
   ];
 
