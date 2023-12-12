@@ -8,13 +8,6 @@
 
   nixpkgs.config.allowUnfree = allowUnfree;
 
-  dconf.settings = {
-    "org/virt-manager/virt-manager/connections" = {
-      autoconnect = ["qemu:///system"];
-      uris = ["qemu:///system"];
-    };
-  };
-
   imports = [
     nix-doom-emacs.hmModule
     ../../user/shell/zsh.nix
@@ -22,6 +15,7 @@
     ../../user/app/doom-emacs/doom-emacs.nix
     ../../user/app/git/git.nix
     ../../user/app/alacritty/alacritty.nix
+    ../../user/app/virtualization/virtualization.nix
     ../defaultPackages.nix
   ];
 
@@ -58,6 +52,7 @@
     pkgs.nodejs_21
     pkgs.qbittorrent
     pkgs.pinta
+    pkgs.prismlauncher
     nix-gaming.packages.${pkgs.system}.star-citizen
   ];
 

@@ -9,6 +9,7 @@
     [ # Include the results of the hardware scan.
       ../../system/hardware-configuration.nix
       (./. + "../../../system/wm"+("/"+wm)+".nix") # My window manager
+      ../../system/app/virtualization/virtualization.nix
     ];
 
   # Bootloader.
@@ -147,12 +148,6 @@
   #};
   networking.wireguard.enable = true;
   services.mullvad-vpn.enable = true;
-  #services.i2p.enable = true;
-
-  # virt manager
-  virtualisation.libvirtd.enable = true;
-  programs.virt-manager.enable = true;
-
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
