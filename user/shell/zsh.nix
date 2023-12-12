@@ -1,11 +1,19 @@
 { config, lib, pkgs, ... }:
 
 {
+  home.packages = [ pkgs.zsh-powerlevel10k ];
   programs.zsh = {
     enable = true;
     syntaxHighlighting = {
       enable = true;
     };
+    plugins = [
+      {
+        name = "powerlevel10k-config";
+        src = lib.cleanSource ./.;
+        file = "p10k.zsh";
+      }
+    ];
     shellAliases = {
       ls = "eza";
       cp = "cp -i";
@@ -17,6 +25,7 @@
       tempty = "trash-empty --trash-dir /home/colin/.trash";
     };
     initExtra = ''
+      source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
       unset HISTFILE
       autoload -U colors && colors
       PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b ";
