@@ -11,7 +11,8 @@
     pkgs.alacritty
     pkgs.spotify
     pkgs.steam-run
-    pkgs.localsend
+    pkgs.flutter
+    pkgsStable.localsend
     pkgsStable.librewolf
     pkgs.firefox
     pkgs.kate
