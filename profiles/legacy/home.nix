@@ -53,6 +53,7 @@
     pkgs.qbittorrent
     pkgs.pinta
     pkgs.prismlauncher
+    pkgs.lutris
     nix-gaming.packages.${pkgs.system}.star-citizen
   ];
 
