@@ -54,6 +54,7 @@
     pkgs.pinta
     pkgs.prismlauncher
     pkgs.lutris
+    pkgs.winetricks
     nix-gaming.packages.${pkgs.system}.star-citizen
   ];
 
