@@ -2,9 +2,9 @@
 
 {
   home.file = {
-    ".config/alacritty/alacritty.yml".text = ''
-      font:
-        size: 10.0
+    ".config/alacritty/alacritty.toml".text = ''
+      [font]
+      size = 10.0
     '';
   };
 }

@@ -54,7 +54,10 @@
     pkgs.pinta
     pkgs.prismlauncher
     pkgs.lutris
+    pkgs.heroic
     pkgs.winetricks
+    pkgs.ffmpeg
+    pkgs.appimage-run
     nix-gaming.packages.${pkgs.system}.star-citizen
   ];
 
