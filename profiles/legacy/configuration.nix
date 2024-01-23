@@ -19,7 +19,8 @@
   boot.kernelParams = ["amdgpu.sg_display=0"];
 
   networking.hostName = hostname; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  #networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  networking.wireless.iwd.enable = true;
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -27,6 +28,7 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
+  #networking.networkmanager.wifi.backend = "iwd";
 
   # allow unfree
   nixpkgs.config.allowUnfree = allowUnfree;
@@ -50,6 +52,8 @@
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
+  services.xserver.autorun = false;
+  services.xserver.displayManager.startx.enable = true;
   services.xserver.videoDrivers = [ "amdgpu" ];
   hardware.opengl.driSupport = true;
   hardware.opengl.driSupport32Bit = true;

@@ -1,4 +1,4 @@
-{ config, pkgs, pkgsStable, nix-doom-emacs, nix-gaming, lib, username, name, email, browser, editor, term, allowUnfree, ... }:
+{ config, pkgs, pkgsStable, nix-doom-emacs, nix-gaming, lib, username, name, email, browser, editor, term, allowUnfree, split-monitor-workspaces, ... }:
 
 {
   # Home Manager needs a bit of information about you and the paths it should
@@ -16,6 +16,8 @@
     ../../user/app/git/git.nix
     ../../user/app/alacritty/alacritty.nix
     ../../user/app/virtualization/virtualization.nix
+    ../../user/wm/hyprland/hyprland.nix
+    ../../user/app/waybar/waybar.nix
     ../defaultPackages.nix
   ];
 
@@ -58,6 +60,10 @@
     pkgs.winetricks
     pkgs.ffmpeg
     pkgs.appimage-run
+    pkgs.waybar
+    pkgs.fuzzel
+    pkgs.grimblast
+    pkgs.feh
     nix-gaming.packages.${pkgs.system}.star-citizen
   ];
 
@@ -67,11 +73,32 @@
     TERM = term;
   };
 
-
   services.emacs = {
     startWithUserSession = "graphical";
     enable = true;
   };
+
+  home.pointerCursor =
+    let
+      getFrom = url: hash: name: {
+          gtk.enable = true;
+          x11.enable = true;
+          name = name;
+          size = 48;
+          package =
+            pkgs.runCommand "moveUp" {} ''
+              mkdir -p $out/share/icons
+              ln -s ${pkgs.fetchzip {
+                url = url;
+                hash = hash;
+              }} $out/share/icons/${name}
+          '';
+        };
+    in
+      getFrom
+        "https://github.com/ful1e5/BreezeX_Cursor/releases/download/v2.0.0/BreezeX-Dark.tar.gz"
+        "sha256-JPPVPU2nXqN4WFMsAcPEyt2M1n6iwkjytT9zF99YeO8="
+        "BreezeX-Dark";
 
   programs.home-manager.enable = true;
 }

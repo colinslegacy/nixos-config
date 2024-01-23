@@ -2,7 +2,7 @@
 
   description = "legacy flake";
 
-  outputs = { self, nixpkgs, home-manager, nixpkgsStable, nix-doom-emacs, nix-gaming,  ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, nixpkgsStable, nix-doom-emacs, nix-gaming, hyprland, split-monitor-workspaces,  ... }@inputs:
     let
       system = "x86_64-linux";
       hostname = "legacy";
@@ -14,7 +14,7 @@
       username = "colin";
       name = "Colin";
       email = "colin@colinslegacy.com";
-      wm = "kde";
+      wm = "hyprland";
       browser = "librewolf";
       editor = "emacsclient";
       term = "alacritty";
@@ -28,6 +28,7 @@
         inherit system;
         modules = [ (./. + "/profiles"+("/"+profile)+"/configuration.nix") ];
         specialArgs = {
+          inherit inputs;
           inherit hostname;
           inherit timezone;
           inherit locale;
@@ -40,8 +41,10 @@
     homeConfigurations = {
       colin = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        modules = [ (./. + "/profiles"+("/"+profile)+"/home.nix") ];
-	      extraSpecialArgs = {
+        modules = [
+          (./. + "/profiles"+("/"+profile)+"/home.nix")
+        ];
+        extraSpecialArgs = {
           inherit username;
           inherit name;
           inherit email;
@@ -52,6 +55,8 @@
           inherit pkgsStable;
           inherit nix-doom-emacs;
           inherit (inputs) nix-gaming;
+          inherit hyprland;
+          inherit split-monitor-workspaces;
         };
       };
     };
@@ -64,6 +69,11 @@
     nixpkgsStable.url = "nixpkgs/nixos-23.11";
     nix-doom-emacs.url = "github:nix-community/nix-doom-emacs";
     nix-gaming.url = "github:fufexan/nix-gaming";
+    hyprland.url = "github:hyprwm/Hyprland";
+    split-monitor-workspaces = {
+      url = "github:Duckonaut/split-monitor-workspaces";
+      inputs.hyprland.follows = "hyprland"; # <- make sure this line is present for the plugin to work as intended
+    };
   };
 
 }
