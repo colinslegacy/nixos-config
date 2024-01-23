@@ -25,6 +25,7 @@
       tempty = "trash-empty --trash-dir /home/colin/.trash";
     };
     initExtra = ''
+      export GTK_THEME=Adwaita:dark
       source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
       unset HISTFILE
       autoload -U colors && colors

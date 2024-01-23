@@ -64,6 +64,9 @@
     pkgs.fuzzel
     pkgs.grimblast
     pkgs.feh
+    pkgs.gnome.nautilus
+    pkgs.gnome.file-roller
+    pkgs.obs-studio
     nix-gaming.packages.${pkgs.system}.star-citizen
   ];
 
@@ -78,14 +81,14 @@
     enable = true;
   };
 
-  home.pointerCursor =
-    let
+  home.pointerCursor = 
+    let 
       getFrom = url: hash: name: {
           gtk.enable = true;
           x11.enable = true;
           name = name;
           size = 48;
-          package =
+          package = 
             pkgs.runCommand "moveUp" {} ''
               mkdir -p $out/share/icons
               ln -s ${pkgs.fetchzip {
@@ -95,7 +98,7 @@
           '';
         };
     in
-      getFrom
+      getFrom 
         "https://github.com/ful1e5/BreezeX_Cursor/releases/download/v2.0.0/BreezeX-Dark.tar.gz"
         "sha256-JPPVPU2nXqN4WFMsAcPEyt2M1n6iwkjytT9zF99YeO8="
         "BreezeX-Dark";

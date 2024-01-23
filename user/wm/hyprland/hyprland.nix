@@ -1,4 +1,4 @@
-{ config, lib, pkgs, hyprland, split-monitor-workspaces, ... }:
+{ config, lib, pkgs, hyprland, split-monitor-workspaces, hycov, hyprland-plugins, ... }:
 
 {
   wayland.windowManager.hyprland = {
@@ -6,6 +6,8 @@
     package = hyprland.packages.${pkgs.system}.hyprland;
     plugins = [
       split-monitor-workspaces.packages.${pkgs.system}.split-monitor-workspaces
+      hycov.packages.${pkgs.system}.hycov
+      hyprland-plugins.packages.${pkgs.system}.hyprtrails
     ];
 
     extraConfig = ''
@@ -16,5 +18,11 @@
       enable = true;
       variables = ["-all"];
     };
+  };
+
+  home.file = {
+    ".config/hypr/hyprpaper.conf".text = ''
+      ${builtins.readFile ./hyprpaper.conf}
+    '';
   };
 }

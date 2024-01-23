@@ -236,6 +236,26 @@
         "type": "github"
       }
     },
+    "hycov": {
+      "inputs": {
+        "hyprland": [
+          "hyprland"
+        ]
+      },
+      "locked": {
+        "lastModified": 1706010211,
+        "narHash": "sha256-XYJhjmLqTUAJAtBo5H3RsA426VmD6ezHVb1C0HbcG4c=",
+        "owner": "DreamMaoMao",
+        "repo": "hycov",
+        "rev": "99d29cdfc86a5c474fa11856fa65b611a3ca1a53",
+        "type": "github"
+      },
+      "original": {
+        "owner": "DreamMaoMao",
+        "repo": "hycov",
+        "type": "github"
+      }
+    },
     "hyprland": {
       "inputs": {
         "hyprland-protocols": "hyprland-protocols",
@@ -255,6 +275,26 @@
       "original": {
         "owner": "hyprwm",
         "repo": "Hyprland",
+        "type": "github"
+      }
+    },
+    "hyprland-plugins": {
+      "inputs": {
+        "hyprland": [
+          "hyprland"
+        ]
+      },
+      "locked": {
+        "lastModified": 1705969938,
+        "narHash": "sha256-nfEJCxFuERjslmcufCUhwAKbavK46yvtniM4Qxs2+oA=",
+        "owner": "hyprwm",
+        "repo": "hyprland-plugins",
+        "rev": "562c5d52f9f284dd229a7cfd04d529285f80149e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hyprwm",
+        "repo": "hyprland-plugins",
         "type": "github"
       }
     },
@@ -607,7 +647,9 @@
     "root": {
       "inputs": {
         "home-manager": "home-manager",
+        "hycov": "hycov",
         "hyprland": "hyprland",
+        "hyprland-plugins": "hyprland-plugins",
         "nix-doom-emacs": "nix-doom-emacs",
         "nix-gaming": "nix-gaming",
         "nixpkgs": "nixpkgs_4",
