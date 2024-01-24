@@ -18,6 +18,9 @@
     ../../user/app/virtualization/virtualization.nix
     ../../user/wm/hyprland/hyprland.nix
     ../../user/app/waybar/waybar.nix
+    ../../user/app/fuzzel/fuzzel.nix
+    ../../user/app/swaync/swaync.nix
+    ../../user/app/swaylock/swaylock.nix
     ../defaultPackages.nix
   ];
 
@@ -60,7 +63,7 @@
     pkgs.winetricks
     pkgs.ffmpeg
     pkgs.appimage-run
-    pkgs.waybar
+    pkgs.swaynotificationcenter
     pkgs.fuzzel
     pkgs.grimblast
     pkgs.feh

@@ -119,12 +119,15 @@
 
   fonts.packages = with pkgs; [
     nerdfonts
+    noto-fonts
   ];
 
   fileSystems."/mnt/nvme0n1p1" = {
     device = "/dev/nvme0n1p1";
     fsType = "ext4";
   };
+
+  security.pam.services.swaylock = {};
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

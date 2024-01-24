@@ -13,7 +13,7 @@
         spacing = 8;
         modules-left = [ "hyprland/workspaces" "hyprland/window" ];
         modules-center = [ "clock"  ];
-        modules-right = ["idle_inhibitor" "pulseaudio" "network" "cpu" "memory" "temperature" "backlight" "keyboard-state" "hyprland/language" "battery" "battery#bat2"  "tray"];
+        modules-right = ["idle_inhibitor" "pulseaudio" "network" "cpu" "memory" "temperature" "backlight" "keyboard-state" "hyprland/language" "battery" "battery#bat2" "tray" "custom/notification"];
         
         "hyprland/workspaces" = {
           disable-scroll = true;
@@ -57,7 +57,7 @@
         };
         
         clock = {
-          format = "{:%H:%M | %m/%d/%Y}";
+          format = "{:%I:%M %p | %m/%d/%Y}";
           tooltip = false;
         };
         
@@ -135,6 +135,27 @@
         "hyprland/window" = {
           max-length = 54;
         };
+
+        "custom/notification" = {
+          tooltip = false;
+          format = "{icon}";
+          format-icons = {
+            notification = "🔔<span foreground='red'><sup>●</sup></span>";
+            none = "🔔";
+            dnd-notification = "🔕<span foreground='red'><sup>●</sup></span>";
+            dnd-none = "🔕";
+            inhibited-notification = "🔔<span foreground='red'><sup>●</sup></span>";
+            inhibited-none = "🔔";
+            dnd-inhibited-notification = "🔕<span foreground='red'><sup>●</sup></span>";
+            dnd-inhibited-none = "🔕";
+          };
+          return-type = "json";
+          exec-if = "which swaync-client";
+          exec = "swaync-client -swb";
+          on-click = "sleep 0.1; swaync-client -t -sw";
+          on-click-right = "swaync-client -d -sw";
+          escape = true;
+        };
       };
     };
 
@@ -162,9 +183,9 @@
       
       .modules-right {         
          background: rgba(29,31,33, 0.6);
-         margin: 2px 6px 0 0;
+         margin: 2px 0 0 0;
          padding-left: 4px;
-         padding-right: 4px;
+         padding-right: 15px;
          
       }
 
@@ -209,8 +230,13 @@
       }
 
       #workspaces button.active {
-        background: rgba(105,181,63,0.7);
+        background: rgba(21, 101, 192, 0.9);
         color: #1d1f21;
+      }
+
+      #custom-notification {
+        font-family: "NotoSansMono Nerd Font";
+        font-size: 14px;
       }
 
      '';

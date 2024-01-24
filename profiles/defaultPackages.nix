@@ -21,7 +21,7 @@
     pkgs.vlc
     pkgs.trash-cli
     pkgs.libsForQt5.kalk
-    pkgs.kitty
-    pkgs.rofi
+    pkgs.libnotify
+    pkgs.swaylock-effects
   ];
 }
