@@ -3,6 +3,7 @@
 {
   #programs.hyprland.enable = true;
   services.xserver.displayManager.lightdm.enable = false;
+  services.xserver.displayManager.sddm.enable = true;
   programs.hyprland = {
     enable = true;
     package = inputs.hyprland.packages.${pkgs.system}.hyprland;

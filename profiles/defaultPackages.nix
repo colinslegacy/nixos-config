@@ -23,5 +23,7 @@
     pkgs.libsForQt5.kalk
     pkgs.libnotify
     pkgs.swaylock-effects
+    pkgs.iwgtk
+    pkgs.kooha
   ];
 }

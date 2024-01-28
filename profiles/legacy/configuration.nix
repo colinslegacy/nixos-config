@@ -52,8 +52,8 @@
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
-  services.xserver.autorun = false;
-  services.xserver.displayManager.startx.enable = true;
+  services.xserver.autorun = true;
+  #services.xserver.displayManager.startx.enable = true;
   services.xserver.videoDrivers = [ "amdgpu" ];
   hardware.opengl.driSupport = true;
   hardware.opengl.driSupport32Bit = true;
@@ -115,7 +115,10 @@
     pkgs.vulkan-tools
     pkgs.glxinfo
     wineWowPackages.stable
+    pkgs.libsForQt5.qt5.qtgraphicaleffects
+    (callPackage ../../system/dm/sddm/sddm-sugar-candy.nix {}).sddm-sugar-candy
   ];
+  services.xserver.displayManager.sddm.theme = "sddm-sugar-candy";
 
   fonts.packages = with pkgs; [
     nerdfonts
@@ -139,6 +142,9 @@
 
   # List services that you want to enable:
   services.gvfs.enable = true;
+  services.blueman.enable = true;
+
+  hardware.bluetooth.enable = true;
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
