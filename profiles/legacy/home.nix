@@ -67,10 +67,14 @@
     pkgs.fuzzel
     pkgs.grimblast
     pkgs.feh
-    pkgs.gnome.nautilus
-    pkgs.gnome.file-roller
     pkgs.obs-studio
-    nix-gaming.packages.${pkgs.system}.star-citizen
+    pkgs.libsForQt5.dolphin
+    pkgs.libsForQt5.ark
+    pkgs.libsForQt5.qt5ct
+    pkgs.libsForQt5.breeze-icons
+    pkgs.libsForQt5.breeze-qt5
+    pkgs.kcc
+    pkgs.hakuneko
   ];
 
   home.sessionVariables = {
@@ -93,6 +97,8 @@
       "x-scheme-handler/https" = "librewolf.desktop";
       "x-scheme-handler/about" = "librewolf.desktop";
       "x-scheme-handler/unknown" = "librewolf.desktop";
+      "image/png" = "feh.desktop";
+      "image/jpeg" = "feh.desktop";
     };
   };
 
@@ -102,7 +108,7 @@
           gtk.enable = true;
           x11.enable = true;
           name = name;
-          size = 48;
+          size = 24;
           package = 
             pkgs.runCommand "moveUp" {} ''
               mkdir -p $out/share/icons

@@ -116,6 +116,7 @@
     pkgs.glxinfo
     wineWowPackages.stable
     pkgs.libsForQt5.qt5.qtgraphicaleffects
+    pkgs.unzip
     (callPackage ../../system/dm/sddm/sddm-sugar-candy.nix {}).sddm-sugar-candy
   ];
   services.xserver.displayManager.sddm.theme = "sddm-sugar-candy";
