@@ -1,4 +1,4 @@
-{ config, pkgs, system, pkgsStable, nix-doom-emacs, nix-gaming, lib, username, name, email, browser, editor, term, allowUnfree, split-monitor-workspaces, nixvim-config, ... }:
+{ config, pkgs, system, pkgsStable, nix-gaming, lib, username, name, email, browser, editor, term, allowUnfree, split-monitor-workspaces, nixvim-config, ... }:
 
 {
   # Home Manager needs a bit of information about you and the paths it should
@@ -9,7 +9,6 @@
   nixpkgs.config.allowUnfree = allowUnfree;
 
   imports = [
-    nix-doom-emacs.hmModule
     ../../user/shell/zsh.nix
     ../../user/app/doom-emacs/doom-emacs.nix
     ../../user/app/git/git.nix

@@ -2,7 +2,7 @@
 
   description = "legacy flake";
 
-  outputs = { self, nixpkgs, home-manager, nixpkgsStable, nix-doom-emacs, nix-gaming, hyprland, split-monitor-workspaces, hycov, hyprland-plugins, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, nixpkgsStable, nix-gaming, hyprland, split-monitor-workspaces, hycov, hyprland-plugins, ... }@inputs:
     let
       system = "x86_64-linux";
       hostname = "legacy";
@@ -54,7 +54,6 @@
           inherit term;
           inherit allowUnfree;
           inherit pkgsStable;
-          inherit nix-doom-emacs;
           inherit (inputs) nix-gaming;
           inherit hyprland;
           inherit split-monitor-workspaces;
@@ -71,7 +70,6 @@
     home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     nixpkgsStable.url = "nixpkgs/nixos-23.11";
-    nix-doom-emacs.url = "github:nix-community/nix-doom-emacs";
     nix-gaming.url = "github:fufexan/nix-gaming";
     hyprland.url = "github:hyprwm/Hyprland";
     split-monitor-workspaces = {
