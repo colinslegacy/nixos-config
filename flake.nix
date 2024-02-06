@@ -16,7 +16,7 @@
       email = "colin@colinslegacy.com";
       wm = "hyprland";
       browser = "librewolf";
-      editor = "emacsclient";
+      editor = "nvim";
       term = "alacritty";
 
       lib = nixpkgs.lib;

@@ -10,7 +10,6 @@
 
   imports = [
     ../../user/shell/zsh.nix
-    ../../user/app/doom-emacs/doom-emacs.nix
     ../../user/app/git/git.nix
     ../../user/app/alacritty/alacritty.nix
     ../../user/app/virtualization/virtualization.nix
