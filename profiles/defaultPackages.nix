@@ -25,5 +25,6 @@
     pkgs.swaylock-effects
     pkgs.iwgtk
     pkgs.kooha
+    pkgs.wl-clipboard
   ];
 }

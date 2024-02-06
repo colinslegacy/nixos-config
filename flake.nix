@@ -49,6 +49,7 @@
           inherit name;
           inherit email;
           inherit browser;
+          inherit system;
           inherit editor;
           inherit term;
           inherit allowUnfree;
@@ -59,6 +60,7 @@
           inherit split-monitor-workspaces;
           inherit hycov;
           inherit hyprland-plugins;
+          inherit (inputs) nixvim-config;
         };
       };
     };
@@ -84,6 +86,7 @@
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
     };
+    nixvim-config.url = "github:colinslegacy/nixvim-config";
   };
 
 }

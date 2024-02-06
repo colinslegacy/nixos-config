@@ -66,8 +66,10 @@
 
   # Configure keymap in X11
   services.xserver = {
-    layout = "us";
-    xkbVariant = "";
+    xkb = {
+      layout = "us";
+      variant = "";
+    };
   };
 
   # Enable CUPS to print documents.
@@ -117,6 +119,7 @@
     wineWowPackages.stable
     pkgs.libsForQt5.qt5.qtgraphicaleffects
     pkgs.unzip
+    pkgs.ripgrep
     (callPackage ../../system/dm/sddm/sddm-sugar-candy.nix {}).sddm-sugar-candy
   ];
   services.xserver.displayManager.sddm.theme = "sddm-sugar-candy";

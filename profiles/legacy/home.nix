@@ -1,4 +1,4 @@
-{ config, pkgs, pkgsStable, nix-doom-emacs, nix-gaming, lib, username, name, email, browser, editor, term, allowUnfree, split-monitor-workspaces, ... }:
+{ config, pkgs, system, pkgsStable, nix-doom-emacs, nix-gaming, lib, username, name, email, browser, editor, term, allowUnfree, split-monitor-workspaces, nixvim-config, ... }:
 
 {
   # Home Manager needs a bit of information about you and the paths it should
@@ -11,7 +11,6 @@
   imports = [
     nix-doom-emacs.hmModule
     ../../user/shell/zsh.nix
-    ../../user/app/neovim/neovim.nix
     ../../user/app/doom-emacs/doom-emacs.nix
     ../../user/app/git/git.nix
     ../../user/app/alacritty/alacritty.nix
@@ -75,6 +74,8 @@
     pkgs.libsForQt5.breeze-qt5
     pkgs.kcc
     pkgs.hakuneko
+    pkgs.lunarvim
+    nixvim-config.packages.${system}.default
   ];
 
   home.sessionVariables = {

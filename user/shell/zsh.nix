@@ -15,6 +15,8 @@
       }
     ];
     shellAliases = {
+      vim = "nvim";
+      vi = "nvim";
       ls = "eza";
       cp = "cp -i";
       df = "duf";
