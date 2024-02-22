@@ -64,6 +64,12 @@
   users.users.colin.shell = pkgs.zsh;
   programs.zsh.enable = true;
 
+  xdg.portal = {
+    enable = true;
+    wlr.enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  };
+
   # Configure keymap in X11
   services.xserver = {
     xkb = {
@@ -118,6 +124,8 @@
     pkgs.glxinfo
     wineWowPackages.stable
     pkgs.libsForQt5.qt5.qtgraphicaleffects
+    pkgs.libsForQt5.kio
+    pkgs.libsForQt5.kio-extras
     pkgs.unzip
     pkgs.ripgrep
     (callPackage ../../system/dm/sddm/sddm-sugar-candy.nix {}).sddm-sugar-candy
@@ -146,6 +154,8 @@
 
   # List services that you want to enable:
   services.gvfs.enable = true;
+  services.avahi.enable = true;
+  services.avahi.nssmdns4 = true;
   services.blueman.enable = true;
 
   hardware.bluetooth.enable = true;

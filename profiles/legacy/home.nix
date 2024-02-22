@@ -6,7 +6,7 @@
   home.username = username;
   home.homeDirectory = "/home/"+username;
 
-  nixpkgs.config.allowUnfree = allowUnfree;
+  nixpkgs.config.allowUnfree = true;
 
   imports = [
     ../../user/shell/zsh.nix
@@ -72,7 +72,6 @@
     pkgs.libsForQt5.breeze-qt5
     pkgs.kcc
     pkgs.hakuneko
-    pkgs.lunarvim
     nixvim-config.packages.${system}.default
   ];
 

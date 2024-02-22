@@ -21,7 +21,7 @@
 
       lib = nixpkgs.lib;
       pkgs = nixpkgs.legacyPackages.${system};
-      pkgsStable = nixpkgsStable.legacyPackages.${system};
+      pkgsStable = import nixpkgsStable { system = system; config = { allowUnfree = true; }; };
     in {
     nixosConfigurations = {
       legacy = lib.nixosSystem {
