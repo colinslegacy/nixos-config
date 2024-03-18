@@ -32,7 +32,7 @@
 
   home.packages = [
     pkgs.steam
-    pkgs.runelite
+    #pkgs.runelite
     pkgs.eza
     pkgs.duf
     pkgs.cargo
@@ -48,7 +48,7 @@
     pkgs.quickemu
     pkgs.nil
     pkgs.ani-cli
-    pkgs.megasync
+    #pkgs.megasync
     pkgs.protontricks
     pkgs.protonup-qt
     pkgs.nodejs_21
@@ -72,6 +72,8 @@
     pkgs.libsForQt5.breeze-qt5
     pkgs.kcc
     pkgs.hakuneko
+    pkgs.nicotine-plus
+    pkgs.supersonic
     nixvim-config.packages.${system}.default
   ];
 

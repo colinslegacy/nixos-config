@@ -1,4 +1,4 @@
-{ config, lib, pkgs, hyprland, split-monitor-workspaces, hycov, hyprland-plugins, ... }:
+{ config, lib, pkgs, hyprland, split-monitor-workspaces, hyprland-plugins, ... }:
 
 {
   wayland.windowManager.hyprland = {
@@ -6,7 +6,6 @@
     package = hyprland.packages.${pkgs.system}.hyprland;
     plugins = [
       split-monitor-workspaces.packages.${pkgs.system}.split-monitor-workspaces
-      hycov.packages.${pkgs.system}.hycov
     ];
 
     extraConfig = ''

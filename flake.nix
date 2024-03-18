@@ -2,7 +2,7 @@
 
   description = "legacy flake";
 
-  outputs = { self, nixpkgs, home-manager, nixpkgsStable, nix-gaming, hyprland, split-monitor-workspaces, hycov, hyprland-plugins, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, nixpkgsStable, nix-gaming, hyprland, split-monitor-workspaces, hyprland-plugins, ... }@inputs:
     let
       system = "x86_64-linux";
       hostname = "legacy";
@@ -57,7 +57,6 @@
           inherit (inputs) nix-gaming;
           inherit hyprland;
           inherit split-monitor-workspaces;
-          inherit hycov;
           inherit hyprland-plugins;
           inherit (inputs) nixvim-config;
         };
@@ -73,12 +72,8 @@
     nix-gaming.url = "github:fufexan/nix-gaming";
     hyprland.url = "github:hyprwm/Hyprland";
     split-monitor-workspaces = {
-      url = "github:Duckonaut/split-monitor-workspaces";
+      url = "github:TyroneWatermelon420/split-monitor-workspaces";
       inputs.hyprland.follows = "hyprland"; # <- make sure this line is present for the plugin to work as intended
-    };
-    hycov = {
-      url = "github:DreamMaoMao/hycov";
-      inputs.hyprland.follows = "hyprland";
     };
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
