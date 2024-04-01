@@ -118,16 +118,17 @@
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
     git
-    pkgs.libratbag
-    pkgs.killall
-    pkgs.vulkan-tools
-    pkgs.glxinfo
+    libratbag
+    killall
+    vulkan-tools
+    glxinfo
     wineWowPackages.stable
-    pkgs.libsForQt5.qt5.qtgraphicaleffects
-    pkgs.libsForQt5.kio
-    pkgs.libsForQt5.kio-extras
-    pkgs.unzip
-    pkgs.ripgrep
+    libsForQt5.qt5.qtgraphicaleffects
+    libsForQt5.kio
+    libsForQt5.kio-extras
+    unzip
+    ripgrep
+    bc
     (callPackage ../../system/dm/sddm/sddm-sugar-candy.nix {}).sddm-sugar-candy
   ];
   services.xserver.displayManager.sddm.theme = "sddm-sugar-candy";
@@ -174,6 +175,12 @@
   #  allowedTCPPorts = [ 14875 ];
   #  allowedUDPPorts = [ 14875 ];
   #};
+
+  networking.extraHosts =
+  ''
+    192.168.1.3 asustor
+  '';
+
   networking.wireguard.enable = true;
   services.mullvad-vpn.enable = true;
 
