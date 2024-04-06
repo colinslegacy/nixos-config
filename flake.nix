@@ -72,7 +72,7 @@
     nix-gaming.url = "github:fufexan/nix-gaming";
     hyprland.url = "github:hyprwm/Hyprland";
     split-monitor-workspaces = {
-      url = "github:TyroneWatermelon420/split-monitor-workspaces";
+      url = "github:nlintn/split-monitor-workspaces";
       inputs.hyprland.follows = "hyprland"; # <- make sure this line is present for the plugin to work as intended
     };
     hyprland-plugins = {

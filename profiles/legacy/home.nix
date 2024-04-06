@@ -73,7 +73,8 @@
     pkgs.kcc
     pkgs.hakuneko
     pkgs.nicotine-plus
-    pkgs.supersonic
+    pkgs.evolution
+    pkgs.xonotic
     nixvim-config.packages.${system}.default
   ];
 
@@ -97,6 +98,7 @@
       "x-scheme-handler/https" = "librewolf.desktop";
       "x-scheme-handler/about" = "librewolf.desktop";
       "x-scheme-handler/unknown" = "librewolf.desktop";
+      "x-scheme-handler/mailto" = "userapp-Evolution-COQOL2.desktop";
       "image/png" = "feh.desktop";
       "image/jpeg" = "feh.desktop";
     };

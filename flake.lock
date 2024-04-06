@@ -122,11 +122,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1711915616,
-        "narHash": "sha256-co6LoFA+j6BZEeJNSR8nZ4oOort5qYPskjrDHBaJgmo=",
+        "lastModified": 1712390667,
+        "narHash": "sha256-ebq+fJZfobqpsAdGDGpxNWSySbQejRwW9cdiil6krCo=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "820be197ccf3adaad9a8856ef255c13b6cc561a6",
+        "rev": "b787726a8413e11b074cde42704b4af32d95545c",
         "type": "github"
       },
       "original": {
@@ -195,11 +195,11 @@
         "xdph": "xdph"
       },
       "locked": {
-        "lastModified": 1711940051,
-        "narHash": "sha256-GyuIbH0+XOtFmugiVNrJfCSCPmgzcXr2PB6JDhjuZvc=",
+        "lastModified": 1712369360,
+        "narHash": "sha256-4GOmo5J10j8bAhG3T4IvLUCmx7tx83VRNDPHFx1uRBI=",
         "owner": "hyprwm",
         "repo": "Hyprland",
-        "rev": "416b3d6167a996c7e94bd537cec20a12a0784efa",
+        "rev": "24734fbf1d341a725d3ed1192b9bf5f55828208f",
         "type": "github"
       },
       "original": {
@@ -220,11 +220,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1711847900,
-        "narHash": "sha256-7lnDcHDZooMw6kTUuJOOHGGd4/VMfBiAgA+xx9qXr0M=",
+        "lastModified": 1712281995,
+        "narHash": "sha256-NoRAAqed5t3b3/Ebt5SW9BWh8dyKRmw9i9KjLcMdLsE=",
         "owner": "hyprwm",
         "repo": "hyprland-plugins",
-        "rev": "e45066d0741a1a4b9298a4c5ec43a5e57b059a4e",
+        "rev": "a7145f019254a7d953d56945c168d1bc698c35e4",
         "type": "github"
       },
       "original": {
@@ -330,11 +330,11 @@
     },
     "nix-filter": {
       "locked": {
-        "lastModified": 1693833173,
-        "narHash": "sha256-hlMABKrGbEiJD5dwUSfnw1CQ3bG7KKwDV+Nx3bEZd7U=",
+        "lastModified": 1710156097,
+        "narHash": "sha256-1Wvk8UP7PXdf8bCCaEoMnOT1qe5/Duqgj+rL8sRQsSM=",
         "owner": "numtide",
         "repo": "nix-filter",
-        "rev": "ac030bd9ba98e318e1f4c4328d60766ade8ebe8b",
+        "rev": "3342559a24e85fc164b295c3444e8a139924675b",
         "type": "github"
       },
       "original": {
@@ -349,11 +349,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1711847810,
-        "narHash": "sha256-gLeUuU3hQ2ErboVIyzDNes2bywdTYDidvi6wG5+tnQ8=",
+        "lastModified": 1712141380,
+        "narHash": "sha256-C2i314gBs1PS98CDbUJGRKx+avs0y9dBLwdWI7O36hs=",
         "owner": "fufexan",
         "repo": "nix-gaming",
-        "rev": "4ec1bf4262e913af85e3f699f564769ec2f23cff",
+        "rev": "2a90858fa6ab2d051cfd1b940f3560f679e92a1a",
         "type": "github"
       },
       "original": {
@@ -416,11 +416,11 @@
     },
     "nixpkgsStable": {
       "locked": {
-        "lastModified": 1711668574,
-        "narHash": "sha256-u1dfs0ASQIEr1icTVrsKwg2xToIpn7ZXxW3RHfHxshg=",
+        "lastModified": 1712310679,
+        "narHash": "sha256-XgC/a/giEeNkhme/AV1ToipoZ/IVm1MV2ntiK4Tm+pw=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "219951b495fc2eac67b1456824cc1ec1fd2ee659",
+        "rev": "72da83d9515b43550436891f538ff41d68eecc7f",
         "type": "github"
       },
       "original": {
@@ -447,11 +447,11 @@
     },
     "nixpkgs_3": {
       "locked": {
-        "lastModified": 1711703276,
-        "narHash": "sha256-iMUFArF0WCatKK6RzfUJknjem0H9m4KgorO/p3Dopkk=",
+        "lastModified": 1712163089,
+        "narHash": "sha256-Um+8kTIrC19vD4/lUCN9/cU9kcOsD1O1m+axJqQPyMM=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "d8fe5e6c92d0d190646fb9f1056741a229980089",
+        "rev": "fd281bd6b7d3e32ddfa399853946f782553163b5",
         "type": "github"
       },
       "original": {
@@ -584,15 +584,15 @@
         "nix-filter": "nix-filter"
       },
       "locked": {
-        "lastModified": 1710514039,
-        "narHash": "sha256-lwsQXv6GjSjxzxtChEpWcEMXomTFcWzAxTqxg1DSrAU=",
-        "owner": "TyroneWatermelon420",
+        "lastModified": 1712294642,
+        "narHash": "sha256-rHNLdl1P6UMcdsJAcPJYnjNAoM6eF8oH53sUl9bML84=",
+        "owner": "nlintn",
         "repo": "split-monitor-workspaces",
-        "rev": "0b941e95ad10dd6ea1936d400d12b5b3b2e8ec83",
+        "rev": "d9453ea2b15d38a999a2f1fb6271bb3ecfdaed5e",
         "type": "github"
       },
       "original": {
-        "owner": "TyroneWatermelon420",
+        "owner": "nlintn",
         "repo": "split-monitor-workspaces",
         "type": "github"
       }

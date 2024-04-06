@@ -16,7 +16,18 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelPackages = pkgs.linuxPackages_latest;
-  boot.kernelParams = ["amdgpu.sg_display=0"];
+  boot.kernelParams = ["amdgpu.sg_display=0" "amd_iommu=on" ];
+  boot.blacklistedKernelModules = [ "nvidia" "nouveau" ];
+  boot.kernelModules = [ "vfio_virqfd" "vfio_pci" "vfio_iommu_type1" "vfio" ];
+  boot.extraModprobeConfig = "options vfio-pci ids=10de:1b80,10de:10f0";
+  boot.postBootCommands = ''
+    DEVS="0000:05:00.0 0000:05:00.1"
+
+    for DEV in $DEVS; do
+      echo "vfio-pci" > /sys/bus/pci/devices/$DEV/driver_override
+    done
+    modprobe -i vfio-pci
+  '';
 
   networking.hostName = hostname; # Define your hostname.
   #networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -129,6 +140,7 @@
     unzip
     ripgrep
     bc
+    libsecret
     (callPackage ../../system/dm/sddm/sddm-sugar-candy.nix {}).sddm-sugar-candy
   ];
   services.xserver.displayManager.sddm.theme = "sddm-sugar-candy";
@@ -175,11 +187,6 @@
   #  allowedTCPPorts = [ 14875 ];
   #  allowedUDPPorts = [ 14875 ];
   #};
-
-  networking.extraHosts =
-  ''
-    192.168.1.3 asustor
-  '';
 
   networking.wireguard.enable = true;
   services.mullvad-vpn.enable = true;
