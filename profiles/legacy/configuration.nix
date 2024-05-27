@@ -143,7 +143,7 @@
     libsecret
     (callPackage ../../system/dm/sddm/sddm-sugar-candy.nix {}).sddm-sugar-candy
   ];
-  services.xserver.displayManager.sddm.theme = "sddm-sugar-candy";
+  services.displayManager.sddm.theme = "sddm-sugar-candy";
 
   fonts.packages = with pkgs; [
     nerdfonts

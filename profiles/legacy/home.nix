@@ -51,7 +51,7 @@
     #pkgs.megasync
     pkgs.protontricks
     pkgs.protonup-qt
-    pkgs.nodejs_21
+    pkgs.nodejs_22
     pkgs.qbittorrent
     pkgs.pinta
     pkgs.prismlauncher
