@@ -68,7 +68,7 @@
     nixpkgs.url = "nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    nixpkgsStable.url = "nixpkgs/nixos-23.11";
+    nixpkgsStable.url = "nixpkgs/nixos-24.05";
     nix-gaming.url = "github:fufexan/nix-gaming";
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
     split-monitor-workspaces = {
