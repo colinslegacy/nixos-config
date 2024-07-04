@@ -49,6 +49,7 @@
     pkgs.nil
     pkgs.ani-cli
     #pkgs.megasync
+    pkgs.atlauncher
     pkgs.protontricks
     pkgs.protonup-qt
     pkgs.nodejs_22
@@ -101,6 +102,18 @@
       "x-scheme-handler/mailto" = "userapp-Evolution-COQOL2.desktop";
       "image/png" = "feh.desktop";
       "image/jpeg" = "feh.desktop";
+    };
+  };
+
+  xdg.desktopEntries = {
+    atlauncher = {
+      name = "ATLauncher";
+      genericName = "Minecraft Launcher";
+      exec = "steam-run atlauncher";
+      terminal = false;
+      icon = "atlauncher";
+      type = "Application";
+      categories = [ "Game" ];
     };
   };
 
