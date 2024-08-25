@@ -76,6 +76,8 @@
     pkgs.nicotine-plus
     pkgs.evolution
     pkgs.xonotic
+    pkgs.rpcs3
+    pkgs.pcsx2
     nixvim-config.packages.${system}.default
   ];
 
