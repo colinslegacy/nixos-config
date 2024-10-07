@@ -15,7 +15,7 @@
       name = "Colin";
       email = "colin@colinslegacy.com";
       wm = "hyprland";
-      browser = "librewolf";
+      browser = "firefox";
       editor = "nvim";
       term = "alacritty";
 

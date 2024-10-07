@@ -27,5 +27,6 @@
     pkgs.kooha
     pkgs.wl-clipboard
     pkgs.nix-init
+    pkgs.bitwarden
   ];
 }
