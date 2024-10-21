@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, system, hostname, ... }:
+{ config, pkgs, system, ... }:
 
 {
   imports =
@@ -29,7 +29,7 @@
     modprobe -i vfio-pci
   '';
 
-  networking.hostName = hostname; # Define your hostname.
+  networking.hostName = "legacy"; # Define your hostname.
   #networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.wireless.iwd.enable = true;
 

@@ -2,13 +2,11 @@
 
   description = "legacy flake";
 
-  outputs = { self, nixpkgs, home-manager, nixpkgsStable, hyprland, split-monitor-workspaces, hyprland-plugins, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, nixpkgsStable, ... }@inputs:
     let
       system = "x86_64-linux";
-      hostname = "legacy";
 
       username = "colin";
-      wm = "hyprland";
       browser = "firefox";
       editor = "nvim";
       term = "alacritty";
@@ -25,8 +23,6 @@
         ];
         specialArgs = {
           inherit inputs;
-          inherit hostname;
-          inherit wm;
           inherit pkgsStable;
         };
       };
@@ -44,11 +40,7 @@
           inherit editor;
           inherit term;
           inherit pkgsStable;
-          inherit (inputs) nix-gaming;
-          inherit hyprland;
-          inherit split-monitor-workspaces;
-          inherit hyprland-plugins;
-          inherit (inputs) nixvim-config;
+          inherit inputs;
         };
       };
     };

@@ -1,4 +1,4 @@
-{ config, pkgs, system, pkgsStable, nix-gaming, lib, username, name, email, browser, editor, term, allowUnfree, split-monitor-workspaces, nixvim-config, ... }:
+{ config, pkgs, system, pkgsStable, lib, username, browser, editor, term, inputs, ... }:
 
 {
   # Home Manager needs a bit of information about you and the paths it should
@@ -77,7 +77,7 @@
     pkgs.xonotic
     pkgs.rpcs3
     pkgs.pcsx2
-    nixvim-config.packages.${system}.default
+    inputs.nixvim-config.packages.${system}.default
   ];
 
   home.sessionVariables = {
