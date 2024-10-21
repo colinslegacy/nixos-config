@@ -28,7 +28,7 @@
       };
     };
     homeConfigurations = {
-      colin = home-manager.lib.homeManagerConfiguration {
+      "colin@legacy" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
           ./profiles/desktop/home.nix
