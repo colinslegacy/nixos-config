@@ -2,14 +2,14 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, system, hostname, timezone, locale, allowUnfree, wm, ... }:
+{ config, pkgs, system, hostname, ... }:
 
 {
   imports =
     [ # Include the results of the hardware scan.
-      ../../system/hardware-configuration.nix
-      (./. + "../../../system/wm"+("/"+wm)+".nix") # My window manager
-      ../../system/app/virtualization/virtualization.nix
+      ./system/hardware-configuration.nix
+      ./system/wm/hyprland.nix
+      ./system/app/virtualization/virtualization.nix
     ];
 
   # Bootloader.
@@ -42,23 +42,23 @@
   #networking.networkmanager.wifi.backend = "iwd";
 
   # allow unfree
-  nixpkgs.config.allowUnfree = allowUnfree;
+  nixpkgs.config.allowUnfree = true;
   # Set your time zone.
-  time.timeZone = timezone;
+  time.timeZone = "America/New_York";
 
   # Select internationalisation properties.
-  i18n.defaultLocale = locale;
+  i18n.defaultLocale = "en_US.UTF-8";
 
   i18n.extraLocaleSettings = {
-    LC_ADDRESS = locale;
-    LC_IDENTIFICATION = locale;
-    LC_MEASUREMENT = locale;
-    LC_MONETARY = locale;
-    LC_NAME = locale;
-    LC_NUMERIC = locale;
-    LC_PAPER = locale;
-    LC_TELEPHONE = locale;
-    LC_TIME = locale;
+    LC_ADDRESS = "en_US.UTF-8";
+    LC_IDENTIFICATION = "en_US.UTF-8";
+    LC_MEASUREMENT = "en_US.UTF-8";
+    LC_MONETARY = "en_US.UTF-8";
+    LC_NAME = "en_US.UTF-8";
+    LC_NUMERIC = "en_US.UTF-8";
+    LC_PAPER = "en_US.UTF-8";
+    LC_TELEPHONE = "en_US.UTF-8";
+    LC_TIME = "en_US.UTF-8";
   };
 
   # Enable the X11 windowing system.
@@ -140,7 +140,7 @@
     ripgrep
     bc
     libsecret
-    (callPackage ../../system/dm/sddm/sddm-sugar-candy.nix {}).sddm-sugar-candy
+    (callPackage ./system/dm/sddm/sddm-sugar-candy.nix {}).sddm-sugar-candy
   ];
   services.displayManager.sddm.theme = "sddm-sugar-candy";
 

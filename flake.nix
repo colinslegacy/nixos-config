@@ -2,18 +2,12 @@
 
   description = "legacy flake";
 
-  outputs = { self, nixpkgs, home-manager, nixpkgsStable, nix-gaming, hyprland, split-monitor-workspaces, hyprland-plugins, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, nixpkgsStable, hyprland, split-monitor-workspaces, hyprland-plugins, ... }@inputs:
     let
       system = "x86_64-linux";
       hostname = "legacy";
-      profile = "legacy";
-      timezone = "America/New_York";
-      locale = "en_US.UTF-8";
-      allowUnfree = true;
 
       username = "colin";
-      name = "Colin";
-      email = "colin@colinslegacy.com";
       wm = "hyprland";
       browser = "firefox";
       editor = "nvim";
@@ -26,14 +20,13 @@
     nixosConfigurations = {
       legacy = lib.nixosSystem {
         inherit system;
-        modules = [ (./. + "/profiles"+("/"+profile)+"/configuration.nix") ];
+        modules = [
+          ./profiles/desktop/configuration.nix
+        ];
         specialArgs = {
           inherit inputs;
           inherit hostname;
-          inherit timezone;
-          inherit locale;
           inherit wm;
-          inherit allowUnfree;
           inherit pkgsStable;
         };
       };
@@ -42,17 +35,14 @@
       colin = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
-          (./. + "/profiles"+("/"+profile)+"/home.nix")
+          ./profiles/desktop/home.nix
         ];
         extraSpecialArgs = {
           inherit username;
-          inherit name;
-          inherit email;
           inherit browser;
           inherit system;
           inherit editor;
           inherit term;
-          inherit allowUnfree;
           inherit pkgsStable;
           inherit (inputs) nix-gaming;
           inherit hyprland;

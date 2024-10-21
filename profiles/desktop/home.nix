@@ -9,15 +9,15 @@
   nixpkgs.config.allowUnfree = true;
 
   imports = [
-    ../../user/shell/zsh.nix
-    ../../user/app/git/git.nix
-    ../../user/app/alacritty/alacritty.nix
-    ../../user/app/virtualization/virtualization.nix
-    ../../user/wm/hyprland/hyprland.nix
-    ../../user/app/waybar/waybar.nix
-    ../../user/app/fuzzel/fuzzel.nix
-    ../../user/app/swaync/swaync.nix
-    ../../user/app/swaylock/swaylock.nix
+    ./user/shell/zsh.nix
+    ./user/app/git/git.nix
+    ./user/app/alacritty/alacritty.nix
+    ./user/app/virtualization/virtualization.nix
+    ./user/wm/hyprland/hyprland.nix
+    ./user/app/waybar/waybar.nix
+    ./user/app/fuzzel/fuzzel.nix
+    ./user/app/swaync/swaync.nix
+    ./user/app/swaylock/swaylock.nix
     ../defaultPackages.nix
   ];
 
@@ -48,7 +48,6 @@
     pkgs.quickemu
     pkgs.nil
     pkgs.ani-cli
-    #pkgs.megasync
     pkgs.atlauncher
     pkgs.protontricks
     pkgs.protonup-qt
