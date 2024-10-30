@@ -144,6 +144,10 @@
   ];
   services.displayManager.sddm.theme = "sddm-sugar-candy";
 
+  services.udev.packages = with pkgs; [
+    zsa-udev-rules
+  ];
+
   fonts.packages = with pkgs; [
     nerdfonts
     noto-fonts

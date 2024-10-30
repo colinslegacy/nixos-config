@@ -17,6 +17,7 @@
     pkgs.firefox
     pkgs.kate
     pkgs.thunderbird
+    pkgs.chromium
     #pkgs.ungoogled-chromium
     pkgs.vlc
     pkgs.trash-cli
