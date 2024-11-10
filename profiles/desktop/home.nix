@@ -7,6 +7,9 @@
   home.homeDirectory = "/home/"+username;
 
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.overlays = [
+    inputs.hyprpanel.overlay
+  ];
 
   imports = [
     ./user/shell/zsh.nix
@@ -60,7 +63,6 @@
     pkgs.winetricks
     pkgs.ffmpeg
     pkgs.appimage-run
-    pkgs.swaynotificationcenter
     pkgs.fuzzel
     pkgs.grimblast
     pkgs.feh
@@ -77,6 +79,8 @@
     pkgs.xonotic
     pkgs.rpcs3
     pkgs.pcsx2
+    pkgs.hyprpanel
+    pkgs.rofi
     inputs.nixvim-config.packages.${system}.default
   ];
 

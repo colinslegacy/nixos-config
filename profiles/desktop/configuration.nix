@@ -10,13 +10,15 @@
       ./system/hardware-configuration.nix
       ./system/wm/hyprland.nix
       ./system/app/virtualization/virtualization.nix
+      ./system/dm/tuigreet/tuigreet.nix
     ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.consoleLogLevel = 0;
   boot.kernelPackages = pkgs.linuxPackages_latest;
-  boot.kernelParams = ["amdgpu.sg_display=0" "amd_iommu=on" ];
+  boot.kernelParams = ["amdgpu.sg_display=0" "amd_iommu=on" "quiet" "udev.log_level=3" ];
   boot.blacklistedKernelModules = [ "nvidia" "nouveau" ];
   boot.kernelModules = [ "vfio_virqfd" "vfio_pci" "vfio_iommu_type1" "vfio" ];
   boot.extraModprobeConfig = "options vfio-pci ids=10de:1b80,10de:10f0";
@@ -66,6 +68,22 @@
   services.xserver.autorun = true;
   #services.xserver.displayManager.startx.enable = true;
   services.xserver.videoDrivers = [ "amdgpu" ];
+  services.xserver.xrandrHeads = [
+    {
+      output = "HDMI-A-1";
+      monitorConfig = ''
+        Option "DPMS" "false"
+      '';
+    }
+    {
+      output = "DP-1";
+      primary = true;
+      monitorConfig = ''
+        Option "DPMS" "false"
+      '';
+    }
+  ];
+
   hardware.graphics.enable32Bit = true;
   programs.dconf.enable = true;
 

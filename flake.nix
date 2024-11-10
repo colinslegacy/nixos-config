@@ -62,6 +62,7 @@
       inputs.hyprland.follows = "hyprland";
     };
     nixvim-config.url = "github:colinslegacy/nixvim-config";
+    hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
   };
 
 }
