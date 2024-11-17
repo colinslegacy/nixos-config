@@ -6,7 +6,7 @@
     pkgs.keepassxc
     pkgs.btop
     pkgs.neofetch
-    pkgs.discord
+    pkgs.vesktop
     pkgs.zsh-syntax-highlighting
     pkgs.alacritty
     pkgs.spotify
