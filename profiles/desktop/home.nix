@@ -99,11 +99,11 @@
     enable = true;
 
     defaultApplications = {
-      "text/html" = "firefox.desktop";
-      "x-scheme-handler/http" = "firefox.desktop";
-      "x-scheme-handler/https" = "firefox.desktop";
-      "x-scheme-handler/about" = "firefox.desktop";
-      "x-scheme-handler/unknown" = "firefox.desktop";
+      "text/html" = "floorp.desktop";
+      "x-scheme-handler/http" = "floorp.desktop";
+      "x-scheme-handler/https" = "floorp.desktop";
+      "x-scheme-handler/about" = "floorp.desktop";
+      "x-scheme-handler/unknown" = "floorp.desktop";
       "x-scheme-handler/mailto" = "userapp-Evolution-COQOL2.desktop";
       "image/png" = "feh.desktop";
       "image/jpeg" = "feh.desktop";

@@ -13,8 +13,8 @@
     pkgs.steam-run
     pkgs.flutter
     pkgsStable.localsend
-    pkgsStable.librewolf
     pkgs.firefox
+    pkgs.floorp
     pkgs.kate
     pkgs.thunderbird
     pkgs.chromium
