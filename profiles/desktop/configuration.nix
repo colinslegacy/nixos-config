@@ -167,7 +167,8 @@
   ];
 
   fonts.packages = with pkgs; [
-    nerdfonts
+    nerd-fonts.ubuntu-sans
+    nerd-fonts.jetbrains-mono
     noto-fonts
   ];
 

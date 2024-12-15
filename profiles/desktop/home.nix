@@ -39,7 +39,6 @@
     pkgs.eza
     pkgs.duf
     pkgs.cargo
-    pkgs.nerdfonts
     pkgs.gcc
     pkgs.gnumake
     pkgs.python311Full
