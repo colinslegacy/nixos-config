@@ -50,7 +50,7 @@
     nixpkgs.url = "nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    nixpkgsStable.url = "nixpkgs/nixos-24.05";
+    nixpkgsStable.url = "nixpkgs/nixos-24.11";
     nix-gaming.url = "github:fufexan/nix-gaming";
     hyprland.url = "github:hyprwm/Hyprland";
     hyprsplit = {

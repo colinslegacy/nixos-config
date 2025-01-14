@@ -35,7 +35,7 @@
 
   home.packages = [
     pkgs.steam
-    pkgs.runelite
+    pkgsStable.runelite
     pkgs.eza
     pkgs.duf
     pkgs.cargo
