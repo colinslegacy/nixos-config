@@ -152,8 +152,8 @@
     glxinfo
     wineWowPackages.stable
     libsForQt5.qt5.qtgraphicaleffects
-    libsForQt5.kio
-    libsForQt5.kio-extras
+    kdePackages.kio
+    kdePackages.kio-extras
     unzip
     ripgrep
     bc

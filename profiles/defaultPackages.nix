@@ -15,13 +15,13 @@
     pkgsStable.localsend
     pkgs.firefox
     pkgs.floorp
-    pkgs.kate
+    pkgs.kdePackages.kate
     pkgs.thunderbird
     pkgs.chromium
     #pkgs.ungoogled-chromium
     pkgs.vlc
     pkgs.trash-cli
-    pkgs.libsForQt5.kalk
+    pkgs.kdePackages.kalk
     pkgs.swaylock-effects
     pkgs.iwgtk
     pkgs.kooha

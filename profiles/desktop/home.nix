@@ -36,6 +36,7 @@
   home.packages = [
     pkgs.steam
     pkgsStable.runelite
+    pkgs.zoom-us
     pkgs.eza
     pkgs.duf
     pkgs.cargo
@@ -66,11 +67,11 @@
     pkgs.grimblast
     pkgs.feh
     pkgs.obs-studio
-    pkgs.libsForQt5.dolphin
-    pkgs.libsForQt5.ark
-    pkgs.libsForQt5.qt5ct
-    pkgs.libsForQt5.breeze-icons
-    pkgs.libsForQt5.breeze-qt5
+    pkgs.kdePackages.dolphin
+    pkgs.kdePackages.ark
+    pkgs.kdePackages.qt6ct
+    pkgs.kdePackages.breeze-icons
+    pkgs.kdePackages.breeze
     pkgs.kcc
     pkgs.hakuneko
     pkgs.nicotine-plus
