@@ -18,7 +18,6 @@
     ./user/app/virtualization/virtualization.nix
     ./user/wm/hyprland/hyprland.nix
     ./user/app/waybar/waybar.nix
-    ./user/app/fuzzel/fuzzel.nix
     ./user/app/swaync/swaync.nix
     ./user/app/swaylock/swaylock.nix
     ../defaultPackages.nix
@@ -63,7 +62,7 @@
     pkgs.winetricks
     pkgs.ffmpeg
     pkgs.appimage-run
-    pkgs.fuzzel
+    pkgs.rofi-wayland
     pkgs.grimblast
     pkgs.feh
     pkgs.obs-studio
@@ -77,11 +76,14 @@
     pkgs.nicotine-plus
     pkgs.evolution
     pkgs.xonotic
-    pkgs.rpcs3
-    pkgs.pcsx2
+    #pkgs.rpcs3
+    #pkgs.pcsx2
     pkgs.hyprpanel
-    pkgs.rofi
+    pkgs.xivlauncher
+    pkgs.bitwarden-cli
+    pkgs.bitwarden-menu
     inputs.nixvim-config.packages.${system}.default
+    inputs.quickshell.packages.${system}.default
   ];
 
   home.sessionVariables = {

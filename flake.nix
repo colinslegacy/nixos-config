@@ -63,6 +63,10 @@
     };
     nixvim-config.url = "github:colinslegacy/nixvim-config";
     hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
+    quickshell = {
+      url = "github:quickshell-mirror/quickshell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
 }
