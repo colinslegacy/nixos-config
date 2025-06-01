@@ -16,10 +16,10 @@
     ./user/app/git/git.nix
     ./user/app/alacritty/alacritty.nix
     ./user/app/virtualization/virtualization.nix
-    ./user/wm/hyprland/hyprland.nix
-    ./user/app/waybar/waybar.nix
-    ./user/app/swaync/swaync.nix
-    ./user/app/swaylock/swaylock.nix
+    #./user/wm/hyprland/hyprland.nix
+    #./user/app/waybar/waybar.nix
+    #./user/app/swaync/swaync.nix
+    #./user/app/swaylock/swaylock.nix
     ../defaultPackages.nix
   ];
 
@@ -66,11 +66,12 @@
     pkgs.grimblast
     pkgs.feh
     pkgs.obs-studio
-    pkgs.kdePackages.dolphin
+    pkgs.pcmanfm
     pkgs.kdePackages.ark
-    pkgs.kdePackages.qt6ct
-    pkgs.kdePackages.breeze-icons
-    pkgs.kdePackages.breeze
+    pkgs.vscode
+    #pkgs.kdePackages.qt6ct
+    #pkgs.kdePackages.breeze-icons
+    #pkgs.kdePackages.breeze
     pkgs.kcc
     pkgs.hakuneko
     pkgs.nicotine-plus
@@ -82,6 +83,7 @@
     pkgs.xivlauncher
     pkgs.bitwarden-cli
     pkgs.bitwarden-menu
+    pkgs.kdePackages.kdeconnect-kde
     inputs.nixvim-config.packages.${system}.default
     inputs.quickshell.packages.${system}.default
   ];
@@ -107,8 +109,8 @@
       "x-scheme-handler/about" = "floorp.desktop";
       "x-scheme-handler/unknown" = "floorp.desktop";
       "x-scheme-handler/mailto" = "userapp-Evolution-COQOL2.desktop";
-      "image/png" = "feh.desktop";
-      "image/jpeg" = "feh.desktop";
+      #"image/png" = "feh.desktop";
+      #"image/jpeg" = "feh.desktop";
     };
   };
 

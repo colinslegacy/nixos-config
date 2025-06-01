@@ -23,7 +23,6 @@
     pkgs.trash-cli
     pkgs.kdePackages.kalk
     pkgs.swaylock-effects
-    pkgs.iwgtk
     pkgs.kooha
     pkgs.wl-clipboard
     pkgs.nix-init

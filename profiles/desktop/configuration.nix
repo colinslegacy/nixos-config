@@ -8,9 +8,10 @@
   imports =
     [ # Include the results of the hardware scan.
       ./system/hardware-configuration.nix
-      ./system/wm/hyprland.nix
+      ./system/wm/kde.nix
+      #./system/wm/hyprland.nix
       ./system/app/virtualization/virtualization.nix
-      ./system/dm/tuigreet/tuigreet.nix
+      #./system/dm/tuigreet/tuigreet.nix
     ];
 
   # Bootloader.
@@ -151,9 +152,9 @@
     vulkan-tools
     glxinfo
     wineWowPackages.stable
-    libsForQt5.qt5.qtgraphicaleffects
     kdePackages.kio
     kdePackages.kio-extras
+    libsForQt5.qtstyleplugin-kvantum
     unzip
     ripgrep
     bc
