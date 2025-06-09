@@ -9,9 +9,7 @@
     [ # Include the results of the hardware scan.
       ./system/hardware-configuration.nix
       ./system/wm/kde.nix
-      #./system/wm/hyprland.nix
       ./system/app/virtualization/virtualization.nix
-      #./system/dm/tuigreet/tuigreet.nix
     ];
 
   # Bootloader.
@@ -154,7 +152,6 @@
     wineWowPackages.stable
     kdePackages.kio
     kdePackages.kio-extras
-    libsForQt5.qtstyleplugin-kvantum
     unzip
     ripgrep
     bc
@@ -178,6 +175,12 @@
     fsType = "ext4";
   };
 
+  /*/qt = {
+    enable = true;
+    style = "kvantum";
+    platformTheme = "kde6";
+  };/*/
+
   security.pam.services.swaylock = {};
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -193,6 +196,7 @@
   services.avahi.enable = true;
   services.avahi.nssmdns4 = true;
   services.blueman.enable = true;
+  services.flatpak.enable = true;
 
   hardware.bluetooth.enable = true;
 

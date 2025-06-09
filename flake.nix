@@ -19,7 +19,7 @@
       legacy = lib.nixosSystem {
         inherit system;
         modules = [
-          ./profiles/desktop/configuration.nix
+          ./configuration.nix
         ];
         specialArgs = {
           inherit inputs;
@@ -28,10 +28,10 @@
       };
     };
     homeConfigurations = {
-      "colin@legacy" = home-manager.lib.homeManagerConfiguration {
+      colin = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
-          ./profiles/desktop/home.nix
+          ./home.nix
         ];
         extraSpecialArgs = {
           inherit username;
@@ -52,21 +52,7 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     nixpkgsStable.url = "nixpkgs/nixos-24.11";
     nix-gaming.url = "github:fufexan/nix-gaming";
-    hyprland.url = "github:hyprwm/Hyprland";
-    hyprsplit = {
-      url = "github:shezdy/hyprsplit";
-      inputs.hyprland.follows = "hyprland"; # <- make sure this line is present for the plugin to work as intended
-    };
-    hyprland-plugins = {
-      url = "github:hyprwm/hyprland-plugins";
-      inputs.hyprland.follows = "hyprland";
-    };
     nixvim-config.url = "github:colinslegacy/nixvim-config";
-    hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
-    quickshell = {
-      url = "github:quickshell-mirror/quickshell";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
 }

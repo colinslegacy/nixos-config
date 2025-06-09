@@ -7,20 +7,12 @@
   home.homeDirectory = "/home/"+username;
 
   nixpkgs.config.allowUnfree = true;
-  nixpkgs.overlays = [
-    inputs.hyprpanel.overlay
-  ];
 
   imports = [
     ./user/shell/zsh.nix
     ./user/app/git/git.nix
-    ./user/app/alacritty/alacritty.nix
     ./user/app/virtualization/virtualization.nix
-    #./user/wm/hyprland/hyprland.nix
-    #./user/app/waybar/waybar.nix
-    #./user/app/swaync/swaync.nix
-    #./user/app/swaylock/swaylock.nix
-    ../defaultPackages.nix
+    ./defaultPackages.nix
   ];
 
   # This value determines the Home Manager release that your configuration is
@@ -69,9 +61,6 @@
     pkgs.pcmanfm
     pkgs.kdePackages.ark
     pkgs.vscode
-    #pkgs.kdePackages.qt6ct
-    #pkgs.kdePackages.breeze-icons
-    #pkgs.kdePackages.breeze
     pkgs.kcc
     pkgs.hakuneko
     pkgs.nicotine-plus
@@ -79,13 +68,11 @@
     pkgs.xonotic
     #pkgs.rpcs3
     #pkgs.pcsx2
-    pkgs.hyprpanel
     pkgs.xivlauncher
     pkgs.bitwarden-cli
     pkgs.bitwarden-menu
     pkgs.kdePackages.kdeconnect-kde
     inputs.nixvim-config.packages.${system}.default
-    inputs.quickshell.packages.${system}.default
   ];
 
   home.sessionVariables = {
@@ -109,10 +96,9 @@
       "x-scheme-handler/about" = "floorp.desktop";
       "x-scheme-handler/unknown" = "floorp.desktop";
       "x-scheme-handler/mailto" = "userapp-Evolution-COQOL2.desktop";
-      #"image/png" = "feh.desktop";
-      #"image/jpeg" = "feh.desktop";
     };
   };
+
 
   xdg.desktopEntries = {
     atlauncher = {
@@ -125,28 +111,6 @@
       categories = [ "Game" ];
     };
   };
-
-  home.pointerCursor = 
-    let 
-      getFrom = url: hash: name: {
-          gtk.enable = true;
-          x11.enable = true;
-          name = name;
-          size = 24;
-          package = 
-            pkgs.runCommand "moveUp" {} ''
-              mkdir -p $out/share/icons
-              ln -s ${pkgs.fetchzip {
-                url = url;
-                hash = hash;
-              }} $out/share/icons/${name}
-          '';
-        };
-    in
-      getFrom 
-        "https://github.com/ful1e5/BreezeX_Cursor/releases/download/v2.0.0/BreezeX-Dark.tar.gz"
-        "sha256-JPPVPU2nXqN4WFMsAcPEyt2M1n6iwkjytT9zF99YeO8="
-        "BreezeX-Dark";
 
   programs.home-manager.enable = true;
 }

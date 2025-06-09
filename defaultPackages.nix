@@ -2,11 +2,9 @@
 
 {
   home.packages = [
-    pkgs.element-desktop
-    pkgs.keepassxc
     pkgs.btop
     pkgs.neofetch
-    pkgs.vesktop
+    pkgs.discord
     pkgs.zsh-syntax-highlighting
     pkgs.alacritty
     pkgs.spotify
@@ -18,14 +16,13 @@
     pkgs.kdePackages.kate
     pkgs.thunderbird
     pkgs.chromium
-    #pkgs.ungoogled-chromium
     pkgs.vlc
     pkgs.trash-cli
     pkgs.kdePackages.kalk
-    pkgs.swaylock-effects
-    pkgs.kooha
     pkgs.wl-clipboard
     pkgs.nix-init
     pkgs.bitwarden
+    pkgs.kdePackages.yakuake
+    pkgs.kdePackages.kjournald
   ];
 }
