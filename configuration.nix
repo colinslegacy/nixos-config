@@ -9,7 +9,7 @@
     [ # Include the results of the hardware scan.
       ./system/hardware-configuration.nix
       ./system/wm/kde.nix
-      ./system/app/virtualization/virtualization.nix
+      ./system/virtualization.nix
     ];
 
   # Bootloader.

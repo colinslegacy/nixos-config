@@ -50,7 +50,7 @@
     nixpkgs.url = "nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    nixpkgsStable.url = "nixpkgs/nixos-24.11";
+    nixpkgsStable.url = "nixpkgs/nixos-25.05";
     nix-gaming.url = "github:fufexan/nix-gaming";
     nixvim-config.url = "github:colinslegacy/nixvim-config";
   };

@@ -26,11 +26,10 @@
       tlist = "trash-list --trash-dir /home/colin/.trash";
       tempty = "trash-empty --trash-dir /home/colin/.trash";
     };
-    initExtra = ''
+    initContent = ''
       source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
       unset HISTFILE
       autoload -U colors && colors
-      PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b ";
       autoload -U compinit
       zstyle ':completion:*' menu select
       zmodload zsh/complist
