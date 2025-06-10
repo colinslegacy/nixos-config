@@ -53,6 +53,7 @@
     nixpkgsStable.url = "nixpkgs/nixos-25.05";
     nix-gaming.url = "github:fufexan/nix-gaming";
     nixvim-config.url = "github:colinslegacy/nixvim-config";
+    nixcord.url = "github:kaylorben/nixcord";
   };
 
 }

@@ -3,8 +3,7 @@
 {
   home.packages = [
     pkgs.steam
-    pkgsStable.runelite
-    pkgs.zoom-us
+    pkgs.runelite
     pkgs.eza
     pkgs.duf
     pkgs.cargo
@@ -17,6 +16,7 @@
     pkgs.piper
     pkgs.fzf
     pkgs.quickemu
+    pkgs.quickgui
     pkgs.nil
     pkgs.ani-cli
     pkgs.atlauncher
@@ -25,17 +25,13 @@
     pkgs.nodejs_22
     pkgs.qbittorrent
     pkgs.pinta
-    pkgs.prismlauncher
     pkgs.lutris
     pkgs.heroic
     pkgs.winetricks
     pkgs.ffmpeg
     pkgs.appimage-run
-    pkgs.rofi-wayland
-    pkgs.grimblast
     pkgs.feh
     pkgs.obs-studio
-    pkgs.pcmanfm
     pkgs.kdePackages.ark
     pkgs.vscode
     pkgs.kcc
@@ -46,18 +42,15 @@
     pkgs.rpcs3
     pkgs.pcsx2
     pkgs.xivlauncher
-    pkgs.bitwarden-cli
-    pkgs.bitwarden-menu
     pkgs.kdePackages.kdeconnect-kde
     pkgs.btop
     pkgs.neofetch
-    pkgs.discord
     pkgs.zsh-syntax-highlighting
     pkgs.alacritty
     pkgs.spotify
     pkgs.steam-run
     pkgs.flutter
-    pkgsStable.localsend
+    pkgs.localsend
     pkgs.firefox
     pkgs.floorp
     pkgs.kdePackages.kate
