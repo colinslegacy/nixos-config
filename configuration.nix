@@ -139,6 +139,13 @@
     packages = with pkgs; [];
   };
 
+  users.users.sarah = {
+    isNormalUser = true;
+    description = "sarah";
+    extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
+    packages = with pkgs; [];
+  };
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -209,11 +216,16 @@
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
   #
-  #networking.firewall = {
-  #  enable = true;
-  #  allowedTCPPorts = [ 14875 ];
-  #  allowedUDPPorts = [ 14875 ];
-  #};
+
+  networking.firewall = { 
+    enable = true;
+    allowedTCPPortRanges = [ 
+      { from = 1714; to = 1764; } # KDE Connect
+    ];  
+    allowedUDPPortRanges = [ 
+      { from = 1714; to = 1764; } # KDE Connect
+    ];  
+  };
 
   networking.wireguard.enable = true;
   services.mullvad-vpn.enable = true;
@@ -226,5 +238,6 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.05"; # Did you read the comment?
 
+  nix.trustedUsers = [ "root" "colin" ];
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 }

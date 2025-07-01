@@ -43,6 +43,21 @@
           inherit inputs;
         };
       };
+      sarah = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        modules = [
+          ./home.nix
+        ];
+        extraSpecialArgs = {
+          inherit username;
+          inherit browser;
+          inherit system;
+          inherit editor;
+          inherit term;
+          inherit pkgsStable;
+          inherit inputs;
+        };
+      };
     };
   };
 

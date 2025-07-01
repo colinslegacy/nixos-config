@@ -12,7 +12,7 @@
         hideAttachments.enable = true;
         ignoreActivities = {
           enable = true;
-          ignorePlaying = true;
+          ignorePlaying = false;
           ignoreWatching = true;
         };
         anonymiseFileNames = {
