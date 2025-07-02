@@ -7,7 +7,7 @@
       system = "x86_64-linux";
 
       username = "colin";
-      browser = "floorp";
+      browser = "firefox";
       editor = "nvim";
       term = "alacritty";
 

@@ -52,7 +52,6 @@
     pkgs.flutter
     pkgs.localsend
     pkgs.firefox
-    pkgs.floorp
     pkgs.kdePackages.kate
     pkgs.thunderbird
     pkgs.chromium
