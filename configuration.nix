@@ -202,6 +202,7 @@
   services.gvfs.enable = true;
   services.avahi.enable = true;
   services.avahi.nssmdns4 = true;
+  services.avahi.openFirewall = true;
   services.blueman.enable = true;
   services.flatpak.enable = true;
 
