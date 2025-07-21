@@ -239,6 +239,6 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.05"; # Did you read the comment?
 
-  nix.trustedUsers = [ "root" "colin" ];
+  nix.settings.trusted-users = [ "root" "colin" ];
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 }
