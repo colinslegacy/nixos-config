@@ -1,4 +1,12 @@
-{ system, config, lib, pkgs, pkgsStable, inputs, ... }:
+{
+  system,
+  config,
+  lib,
+  pkgs,
+  pkgsStable,
+  inputs,
+  ...
+}:
 
 {
   home.packages = [
@@ -33,7 +41,7 @@
     pkgs.feh
     pkgs.obs-studio
     pkgs.kdePackages.ark
-    pkgs.vscode
+    pkgs.zed-editor
     pkgs.kcc
     pkgs.hakuneko
     pkgs.nicotine-plus
