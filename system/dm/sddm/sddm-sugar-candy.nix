@@ -1,4 +1,8 @@
-{ pkgs, stdenv, fetchFromGitHub }:
+{
+  pkgs,
+  stdenv,
+  fetchFromGitHub,
+}:
 {
   sddm-sugar-candy = stdenv.mkDerivation rec {
     pname = "sddm-sugar-candy";

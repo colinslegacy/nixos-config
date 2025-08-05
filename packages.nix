@@ -10,6 +10,7 @@
 
 {
   home.packages = [
+    pkgs.nixd
     pkgs.steam
     pkgs.runelite
     pkgs.eza

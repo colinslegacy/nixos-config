@@ -2,24 +2,42 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, system, ... }:
+{
+  config,
+  pkgs,
+  system,
+  ...
+}:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./system/hardware-configuration.nix
-      ./system/wm/kde.nix
-      ./system/virtualization.nix
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    ./system/hardware-configuration.nix
+    ./system/wm/kde.nix
+    ./system/virtualization.nix
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.consoleLogLevel = 0;
   boot.kernelPackages = pkgs.linuxPackages_latest;
-  boot.kernelParams = ["amdgpu.sg_display=0" "amd_iommu=on" "quiet" "udev.log_level=3" ];
-  boot.blacklistedKernelModules = [ "nvidia" "nouveau" ];
-  boot.kernelModules = [ "vfio_virqfd" "vfio_pci" "vfio_iommu_type1" "vfio" ];
+  boot.kernelParams = [
+    "amdgpu.sg_display=0"
+    "amd_iommu=on"
+    "quiet"
+    "udev.log_level=3"
+  ];
+  boot.blacklistedKernelModules = [
+    "nvidia"
+    "nouveau"
+  ];
+  boot.kernelModules = [
+    "vfio_virqfd"
+    "vfio_pci"
+    "vfio_iommu_type1"
+    "vfio"
+  ];
   boot.extraModprobeConfig = "options vfio-pci ids=10de:1b80,10de:10f0";
   boot.postBootCommands = ''
     DEVS="0000:05:00.0 0000:05:00.1"
@@ -135,15 +153,23 @@
   users.users.colin = {
     isNormalUser = true;
     description = "colin";
-    extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
-    packages = with pkgs; [];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "libvirtd"
+    ];
+    packages = with pkgs; [ ];
   };
 
   users.users.sarah = {
     isNormalUser = true;
     description = "sarah";
-    extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
-    packages = with pkgs; [];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "libvirtd"
+    ];
+    packages = with pkgs; [ ];
   };
 
   # List packages installed in system profile. To search, run:
@@ -163,7 +189,7 @@
     ripgrep
     bc
     libsecret
-    (callPackage ./system/dm/sddm/sddm-sugar-candy.nix {}).sddm-sugar-candy
+    (callPackage ./system/dm/sddm/sddm-sugar-candy.nix { }).sddm-sugar-candy
   ];
   services.displayManager.sddm.theme = "sddm-sugar-candy";
 
@@ -182,13 +208,15 @@
     fsType = "ext4";
   };
 
-  /*/qt = {
-    enable = true;
-    style = "kvantum";
-    platformTheme = "kde6";
-  };/*/
+  /*
+    /qt = {
+      enable = true;
+      style = "kvantum";
+      platformTheme = "kde6";
+    };/
+  */
 
-  security.pam.services.swaylock = {};
+  security.pam.services.swaylock = { };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -218,14 +246,20 @@
   # networking.firewall.enable = false;
   #
 
-  networking.firewall = { 
+  networking.firewall = {
     enable = true;
-    allowedTCPPortRanges = [ 
-      { from = 1714; to = 1764; } # KDE Connect
-    ];  
-    allowedUDPPortRanges = [ 
-      { from = 1714; to = 1764; } # KDE Connect
-    ];  
+    allowedTCPPortRanges = [
+      {
+        from = 1714;
+        to = 1764;
+      } # KDE Connect
+    ];
+    allowedUDPPortRanges = [
+      {
+        from = 1714;
+        to = 1764;
+      } # KDE Connect
+    ];
   };
 
   networking.wireguard.enable = true;
@@ -239,6 +273,12 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.05"; # Did you read the comment?
 
-  nix.settings.trusted-users = [ "root" "colin" ];
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.trusted-users = [
+    "root"
+    "colin"
+  ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 }
