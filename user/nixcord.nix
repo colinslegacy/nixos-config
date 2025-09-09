@@ -15,7 +15,6 @@
       useQuickCss = true;
       frameless = true;
       plugins = {
-        hideAttachments.enable = true;
         ignoreActivities = {
           enable = true;
           ignorePlaying = false;

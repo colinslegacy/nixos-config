@@ -72,6 +72,8 @@
     pkgs.bitwarden
     pkgs.kdePackages.yakuake
     pkgs.kdePackages.kjournald
+    pkgs.mullvad-vpn
+    pkgs.plexamp
     inputs.nixvim-config.packages.${system}.default
   ];
 }
