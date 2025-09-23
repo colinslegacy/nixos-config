@@ -12,13 +12,13 @@
   home.packages = [
     pkgs.nixd
     pkgs.steam
-    pkgs.runelite
+    pkgs.bolt-launcher
     pkgs.eza
     pkgs.duf
     pkgs.cargo
     pkgs.gcc
     pkgs.gnumake
-    pkgs.python311Full
+    pkgs.python311
     pkgs.gnupg
     pkgs.telegram-desktop
     pkgs.scrcpy
