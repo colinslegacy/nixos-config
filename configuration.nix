@@ -189,6 +189,7 @@
     ripgrep
     bc
     libsecret
+    xclicker
     (callPackage ./system/dm/sddm/sddm-sugar-candy.nix { }).sddm-sugar-candy
   ];
   services.displayManager.sddm.theme = "sddm-sugar-candy";
@@ -204,7 +205,7 @@
   ];
 
   fileSystems."/mnt/nvme0n1p1" = {
-    device = "/dev/nvme0n1p1";
+    device = "/dev/disk/by-uuid/ce7015b9-b9a9-4be6-9658-c48dc84c1541";
     fsType = "ext4";
   };
 
@@ -276,6 +277,7 @@
   nix.settings.trusted-users = [
     "root"
     "colin"
+    "sarah"
   ];
   nix.settings.experimental-features = [
     "nix-command"

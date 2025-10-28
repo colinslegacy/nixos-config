@@ -30,6 +30,7 @@
       restore = "trash-restore --trash-dir /home/colin/.trash";
       tlist = "trash-list --trash-dir /home/colin/.trash";
       tempty = "trash-empty --trash-dir /home/colin/.trash";
+      repairstore = "nix-store --verify --check-contents --repair";
     };
     initContent = ''
       source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme

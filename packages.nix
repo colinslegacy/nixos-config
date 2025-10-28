@@ -33,8 +33,8 @@
     pkgs.protonup-qt
     pkgs.nodejs_22
     pkgs.qbittorrent
-    pkgs.pinta
-    pkgs.lutris
+    #pkgs.pinta
+    #pkgs.lutris
     pkgs.heroic
     pkgs.winetricks
     pkgs.ffmpeg
@@ -43,20 +43,20 @@
     pkgs.obs-studio
     pkgs.kdePackages.ark
     pkgs.zed-editor
-    pkgs.kcc
+    #pkgs.kcc
     pkgs.hakuneko
     pkgs.nicotine-plus
     pkgs.evolution
     pkgs.xonotic
-    pkgs.rpcs3
+    #pkgs.rpcs3
     pkgs.pcsx2
-    pkgs.xivlauncher
+    #pkgs.xivlauncher
     pkgs.kdePackages.kdeconnect-kde
     pkgs.btop
     pkgs.neofetch
     pkgs.zsh-syntax-highlighting
     pkgs.alacritty
-    pkgs.spotify
+    #pkgs.spotify
     pkgs.steam-run
     pkgs.flutter
     pkgs.localsend
@@ -74,6 +74,7 @@
     pkgs.kdePackages.kjournald
     pkgs.mullvad-vpn
     pkgs.plexamp
+    pkgs.steamtinkerlaunch
     inputs.nixvim-config.packages.${system}.default
   ];
 }

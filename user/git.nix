@@ -7,9 +7,9 @@
 {
   home.packages = [ pkgs.git ];
   programs.git.enable = true;
-  programs.git.userName = "colinslegacy";
-  programs.git.userEmail = "colin@colinslegacy.com";
-  programs.git.extraConfig = {
+  programs.git.settings = {
     init.defaultBranch = "main";
+    user.name = "colinslegacy";
+    user.email = "colin@colinslegacy.com";
   };
 }
