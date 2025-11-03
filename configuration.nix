@@ -85,21 +85,6 @@
   services.xserver.autorun = true;
   #services.xserver.displayManager.startx.enable = true;
   services.xserver.videoDrivers = [ "amdgpu" ];
-  services.xserver.xrandrHeads = [
-    {
-      output = "HDMI-A-1";
-      monitorConfig = ''
-        Option "DPMS" "false"
-      '';
-    }
-    {
-      output = "DP-1";
-      primary = true;
-      monitorConfig = ''
-        Option "DPMS" "false"
-      '';
-    }
-  ];
 
   hardware.graphics.enable32Bit = true;
   programs.dconf.enable = true;
@@ -181,7 +166,7 @@
     libratbag
     killall
     vulkan-tools
-    glxinfo
+    mesa-demos
     wineWowPackages.stable
     kdePackages.kio
     kdePackages.kio-extras

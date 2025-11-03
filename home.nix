@@ -25,7 +25,7 @@
     ./user/git.nix
     ./user/virtualization.nix
     ./packages.nix
-    #./user/nixcord.nix
+    ./user/nixcord.nix
   ];
 
   # This value determines the Home Manager release that your configuration is
