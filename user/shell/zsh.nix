@@ -25,7 +25,6 @@
       ls = "eza";
       cp = "cp -i";
       df = "duf";
-      weather = "curl wttr.in/purcellville";
       rm = "trash --trash-dir /home/colin/.trash";
       restore = "trash-restore --trash-dir /home/colin/.trash";
       tlist = "trash-list --trash-dir /home/colin/.trash";

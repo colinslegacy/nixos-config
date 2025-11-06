@@ -78,6 +78,8 @@
     plexamp
     steamtinkerlaunch
     obsidian
+    libreoffice-qt6-fresh
+    kdePackages.baloo
     inputs.nixvim-config.packages.${system}.default
   ];
 }
