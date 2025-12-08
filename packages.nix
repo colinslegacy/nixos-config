@@ -3,6 +3,7 @@
   config,
   lib,
   pkgs,
+  pkgsStable,
   table,
   inputs,
   ...
@@ -11,7 +12,6 @@
 {
   home.packages = with pkgs; [
     nixd
-    steam
     bolt-launcher
     eza
     duf
@@ -41,17 +41,14 @@
     appimage-run
     feh
     obs-studio
-    kdePackages.ark
     zed-editor
-    kcc
     hakuneko
     nicotine-plus
     evolution
     xonotic
-    rpcs3
+    #rpcs3
     pcsx2
     xivlauncher
-    kdePackages.kdeconnect-kde
     btop
     neofetch
     zsh-syntax-highlighting
@@ -61,25 +58,22 @@
     flutter
     localsend
     firefox
-    kdePackages.kate
     thunderbird
     chromium
     vlc
     trash-cli
-    kdePackages.kalk
     wl-clipboard
     nix-init
     bitwarden-desktop
-    kdePackages.yakuake
-    kdePackages.kjournald
-    kdePackages.kmail
-    kdePackages.kmail-account-wizard
     mullvad-vpn
     plexamp
     steamtinkerlaunch
     obsidian
     libreoffice-qt6-fresh
     kdePackages.baloo
+    claude-code
+    ollama-rocm
+    plasma-panel-colorizer
     inputs.nixvim-config.packages.${system}.default
   ];
 }

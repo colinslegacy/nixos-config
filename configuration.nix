@@ -97,7 +97,7 @@
   xdg.portal = {
     enable = true;
     #wlr.enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    extraPortals = with pkgs; [ kdePackages.xdg-desktop-portal-kde ];
   };
 
   # Configure keymap in X11
@@ -157,6 +157,24 @@
     packages = with pkgs; [ ];
   };
 
+  programs._1password.enable = true;
+  programs._1password-gui = {
+    enable = true;
+    # Certain features, including CLI integration and system authentication support,
+    # require enabling PolKit integration on some desktop environments (e.g. Plasma).
+    polkitPolicyOwners = [ "colin" ];
+  };
+
+  environment.etc = {
+    "1password/custom_allowed_browsers" = {
+      text = ''
+        .firefox-wrapped
+        firefox
+      '';
+      mode = "0755";
+    };
+  };
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -168,16 +186,12 @@
     vulkan-tools
     mesa-demos
     wineWowPackages.stable
-    kdePackages.kio
-    kdePackages.kio-extras
     unzip
     ripgrep
     bc
     libsecret
     xclicker
-    (callPackage ./system/dm/sddm/sddm-sugar-candy.nix { }).sddm-sugar-candy
   ];
-  services.displayManager.sddm.theme = "sddm-sugar-candy";
 
   services.udev.packages = with pkgs; [
     zsa-udev-rules
@@ -211,6 +225,12 @@
   #   enable = true;
   #   enableSSHSupport = true;
   # };
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
+    dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+    localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
+  };
 
   # List services that you want to enable:
   services.gvfs.enable = true;

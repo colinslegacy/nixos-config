@@ -22,7 +22,7 @@
         };
         anonymiseFileNames = {
           enable = true;
-          method = "randomCharacters";
+          method = 0;
           randomisedLength = 10;
         };
         betterSettings.enable = true;
@@ -31,9 +31,9 @@
           enable = true;
           format = "human";
         };
-        clearURLs.enable = true;
+        clearUrLs.enable = true;
         copyFileContents.enable = true;
-        copyUserURLs.enable = true;
+        copyUserUrLs.enable = true;
         fixImagesQuality.enable = true;
         forceOwnerCrown.enable = true;
         friendsSince.enable = true;
