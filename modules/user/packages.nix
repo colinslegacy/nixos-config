@@ -74,6 +74,7 @@
     claude-code
     ollama-rocm
     plasma-panel-colorizer
+    grc
     inputs.nixvim-config.packages.${system}.default
   ];
 }

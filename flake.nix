@@ -12,12 +12,6 @@
     }@inputs:
     let
       system = "x86_64-linux";
-
-      username = "colin";
-      browser = "firefox";
-      editor = "nvim";
-      term = "alacritty";
-
       lib = nixpkgs.lib;
       pkgs = nixpkgs.legacyPackages.${system};
       pkgsStable = import nixpkgsStable {
@@ -32,7 +26,17 @@
         legacy = lib.nixosSystem {
           inherit system;
           modules = [
-            ./configuration.nix
+            ./hosts/desktop/configuration.nix
+          ];
+          specialArgs = {
+            inherit inputs;
+            inherit pkgsStable;
+          };
+        };
+        laptop = lib.nixosSystem {
+          inherit system;
+          modules = [
+            ./hosts/laptop/configuration.nix
           ];
           specialArgs = {
             inherit inputs;
@@ -44,29 +48,10 @@
         colin = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           modules = [
-            ./home.nix
+            ./modules/user/home.nix
           ];
           extraSpecialArgs = {
-            inherit username;
-            inherit browser;
             inherit system;
-            inherit editor;
-            inherit term;
-            inherit pkgsStable;
-            inherit inputs;
-          };
-        };
-        sarah = home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
-          modules = [
-            ./home.nix
-          ];
-          extraSpecialArgs = {
-            inherit username;
-            inherit browser;
-            inherit system;
-            inherit editor;
-            inherit term;
             inherit pkgsStable;
             inherit inputs;
           };

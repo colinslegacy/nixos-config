@@ -4,10 +4,6 @@
   system,
   pkgsStable,
   lib,
-  username,
-  browser,
-  editor,
-  term,
   inputs,
   ...
 }:
@@ -15,17 +11,17 @@
 {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
-  home.username = username;
-  home.homeDirectory = "/home/" + username;
+  home.username = "colin";
+  home.homeDirectory = "/home/colin";
 
   nixpkgs.config.allowUnfree = true;
 
   imports = [
-    ./user/shell/zsh.nix
-    ./user/git.nix
-    ./user/virtualization.nix
+    ./shell/zsh.nix
+    ./git.nix
+    ./virtualization.nix
     ./packages.nix
-    ./user/nixcord.nix
+    ./nixcord.nix
   ];
 
   # This value determines the Home Manager release that your configuration is
@@ -38,9 +34,9 @@
   home.stateVersion = "23.05"; # Please read the comment before changing.
 
   home.sessionVariables = {
-    EDITOR = editor;
-    BROWSER = browser;
-    TERM = term;
+    EDITOR = "zeditor";
+    BROWSER = "firefox";
+    TERM = "yakuake";
   };
 
   xdg.mimeApps = {

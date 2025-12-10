@@ -41,6 +41,7 @@
       compinit -D
       _comp_options+=(globdots)		# Include hidden files.
       bindkey -v
+      source ${pkgs.grc}/etc/grc.zsh
     '';
   };
 }
