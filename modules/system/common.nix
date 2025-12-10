@@ -59,6 +59,8 @@
       text = ''
         .firefox-wrapped
         firefox
+        .zen-beta-wrapped
+        zen
       '';
       mode = "0755";
     };

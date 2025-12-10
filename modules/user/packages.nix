@@ -10,6 +10,10 @@
 }:
 
 {
+  imports = [
+    inputs.zen-browser.homeModules.beta
+  ];
+
   home.packages = with pkgs; [
     nixd
     bolt-launcher
@@ -77,4 +81,6 @@
     grc
     inputs.nixvim-config.packages.${system}.default
   ];
+
+  programs.zen-browser.enable = true;
 }

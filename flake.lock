@@ -542,7 +542,8 @@
         "nixcord": "nixcord",
         "nixpkgs": "nixpkgs_3",
         "nixpkgsStable": "nixpkgsStable",
-        "nixvim-config": "nixvim-config"
+        "nixvim-config": "nixvim-config",
+        "zen-browser": "zen-browser"
       }
     },
     "systems": {
@@ -579,6 +580,29 @@
       "original": {
         "owner": "numtide",
         "repo": "treefmt-nix",
+        "type": "github"
+      }
+    },
+    "zen-browser": {
+      "inputs": {
+        "home-manager": [
+          "home-manager"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1765344150,
+        "narHash": "sha256-RoGBKQglbF19aINeV8F7DHCXxF7FrMRLgL2yjl9vOiQ=",
+        "owner": "0xc000022070",
+        "repo": "zen-browser-flake",
+        "rev": "1adab25828578301037855c59849e9bbecf8948b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "0xc000022070",
+        "repo": "zen-browser-flake",
         "type": "github"
       }
     }
