@@ -1,7 +1,4 @@
 {
-  system,
-  config,
-  lib,
   pkgs,
   pkgsStable,
   table,
@@ -10,10 +7,6 @@
 }:
 
 {
-  imports = [
-    inputs.zen-browser.homeModules.beta
-  ];
-
   home.packages = with pkgs; [
     nixd
     bolt-launcher
@@ -79,8 +72,5 @@
     ollama-rocm
     plasma-panel-colorizer
     grc
-    inputs.nixvim-config.packages.${system}.default
   ];
-
-  programs.zen-browser.enable = true;
 }

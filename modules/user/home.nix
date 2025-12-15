@@ -14,7 +14,14 @@
   home.username = "colin";
   home.homeDirectory = "/home/colin";
 
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs = {
+    overlays = [
+      inputs.nur.overlays.default
+    ];
+    config = {
+      allowUnfree = true;
+    };
+  };
 
   imports = [
     ./shell/zsh.nix
@@ -22,6 +29,7 @@
     ./virtualization.nix
     ./packages.nix
     ./nixcord.nix
+    ./zed-browser.nix
   ];
 
   # This value determines the Home Manager release that your configuration is

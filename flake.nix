@@ -74,6 +74,6 @@
         home-manager.follows = "home-manager";
       };
     };
+    nur.url = "github:nix-community/nur";
   };
-
 }
