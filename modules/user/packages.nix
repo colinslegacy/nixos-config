@@ -1,7 +1,6 @@
 {
   pkgs,
   pkgsStable,
-  table,
   inputs,
   ...
 }:
@@ -72,5 +71,6 @@
     ollama-rocm
     plasma-panel-colorizer
     grc
+    inputs.nixvim-config.packages.${stdenv.hostPlatform.system}.default
   ];
 }

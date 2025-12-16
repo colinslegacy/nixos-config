@@ -9,10 +9,6 @@
     inputs.zen-browser.homeModules.beta
   ];
 
-  home.packages = [
-    inputs.nixvim-config.packages.${system}.default
-  ];
-
   programs.zen-browser.enable = true;
 
   programs.zen-browser.profiles.default =
