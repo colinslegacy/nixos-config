@@ -64,12 +64,19 @@
           isEssential = true;
           position = 104;
         };
+        "Ebay" = {
+          id = "d2b82219-bd40-4574-a455-487eeb53be87";
+          container = containers.Personal.id;
+          url = "https://www.ebay.com";
+          isEssential = true;
+          position = 105;
+        };
         "X" = {
           id = "9b72f5c1-ffff-486c-bd3d-aa6654ada0c2";
           container = containers.Personal.id;
           url = "https://x.com";
           isEssential = true;
-          position = 105;
+          position = 106;
         };
         "ADM" = {
           id = "29039df6-fc96-4e2b-8332-ceaec977b65c";
