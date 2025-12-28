@@ -106,14 +106,14 @@
           isEssential = true;
           position = 204;
         };
-        "Plex" = {
-          id = "90e788dc-e876-4fba-9677-1f3d86d7f789";
+        "Jellyfin" = {
+          id = "67776748-6a3b-4be4-92a4-d17b52112a64";
           container = containers.NAS.id;
-          url = "http://plex.legacy.local";
+          url = "http://jellyfin.legacy.local";
           isEssential = true;
           position = 205;
         };
-        "Overseerr" = {
+        "Seerr" = {
           id = "a8d0a50c-2864-4d76-858f-a5a532a9b23d";
           container = containers.NAS.id;
           url = "http://overseerr.legacy.local";

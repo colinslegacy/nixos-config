@@ -29,7 +29,7 @@
     ./virtualization.nix
     ./packages.nix
     ./nixcord.nix
-    ./zed-browser.nix
+    ./zen-browser.nix
   ];
 
   # This value determines the Home Manager release that your configuration is
