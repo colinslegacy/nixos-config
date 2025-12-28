@@ -32,6 +32,10 @@
   services.blueman.enable = true;
   services.flatpak.enable = true;
   services.mullvad-vpn.enable = true;
+  services.tailscale = {
+    enable = true;
+    useRoutingFeatures = "client";
+  };
   services.udev.packages = with pkgs; [
     zsa-udev-rules
   ];
