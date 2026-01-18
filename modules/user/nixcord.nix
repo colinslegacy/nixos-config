@@ -31,9 +31,9 @@
           enable = true;
           format = "human";
         };
-        clearUrLs.enable = true;
+        ClearURLs.enable = true;
         copyFileContents.enable = true;
-        copyUserUrLs.enable = true;
+        CopyUserURLs.enable = true;
         fixImagesQuality.enable = true;
         forceOwnerCrown.enable = true;
         friendsSince.enable = true;
@@ -44,7 +44,7 @@
         messageLogger.enable = true;
         noBlockedMessages.enable = true;
         permissionsViewer.enable = true;
-        pinDMs.enable = true;
+        PinDMs.enable = true;
         relationshipNotifier.enable = true;
         serverInfo.enable = true;
         shikiCodeblocks.enable = true;

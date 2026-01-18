@@ -24,7 +24,7 @@
     quickgui
     nil
     ani-cli
-    atlauncher
+    prismlauncher
     protontricks
     protonup-qt
     nodejs_22
@@ -41,7 +41,6 @@
     hakuneko
     nicotine-plus
     evolution
-    xonotic
     #rpcs3
     pcsx2
     xivlauncher

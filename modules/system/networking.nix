@@ -6,7 +6,6 @@
 }:
 
 {
-  networking.wireless.iwd.enable = true;
   networking.networkmanager.enable = true;
   networking.wireguard.enable = true;
   networking.firewall = {
