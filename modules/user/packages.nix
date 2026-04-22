@@ -45,7 +45,6 @@
     pcsx2
     xivlauncher
     btop
-    neofetch
     zsh-syntax-highlighting
     alacritty
     spotify
