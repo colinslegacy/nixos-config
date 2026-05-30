@@ -14,7 +14,7 @@
     killall
     vulkan-tools
     mesa-demos
-    wineWowPackages.stable
+    wineWow64Packages.stable
     unzip
     ripgrep
     bc
@@ -41,6 +41,13 @@
     remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
     dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
     localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
+  };
+
+  programs.direnv = {
+    enable = true;
+    enableBashIntegration = true;
+    enableZshIntegration = true;
+    nix-direnv.enable = true;
   };
 
   programs.dconf.enable = true;

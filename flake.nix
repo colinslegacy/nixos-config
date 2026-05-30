@@ -63,7 +63,7 @@
     nixpkgs.url = "nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    nixpkgsStable.url = "nixpkgs/nixos-25.11";
+    nixpkgsStable.url = "nixpkgs/nixos-26.05";
     nix-gaming.url = "github:fufexan/nix-gaming";
     nixvim-config.url = "github:colinslegacy/nixvim-config";
     nixcord.url = "github:kaylorben/nixcord";
@@ -75,5 +75,6 @@
       };
     };
     nur.url = "github:nix-community/nur";
+    vortex.url = "github:Nexus-Mods/Vortex";
   };
 }

@@ -27,7 +27,7 @@
     prismlauncher
     protontricks
     protonup-qt
-    nodejs_22
+    nodejs_24
     qbittorrent
     pinta
     lutris
@@ -69,6 +69,7 @@
     ollama-rocm
     plasma-panel-colorizer
     grc
+    flyctl
     inputs.nixvim-config.packages.${stdenv.hostPlatform.system}.default
   ];
 }

@@ -17,6 +17,11 @@
   nixpkgs = {
     overlays = [
       inputs.nur.overlays.default
+      (_: prev: {
+        openldap = prev.openldap.overrideAttrs {
+          doCheck = !prev.stdenv.hostPlatform.isi686;
+        };
+      })
     ];
     config = {
       allowUnfree = true;
