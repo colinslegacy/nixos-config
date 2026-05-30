@@ -5,7 +5,7 @@
   ...
 }:
 let
-  wallpaper = ./1308164.jpeg;
+  wallpaper = ./frierenuw.jpeg;
   lockscreenWallpaper = (
     pkgs.writeTextDir "share/sddm/themes/breeze/theme.conf.user" ''
       [General]
