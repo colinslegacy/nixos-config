@@ -29,5 +29,6 @@
     kdePackages.kmag
     kdePackages.kweather
     kdePackages.marble
+    kdePackages.sddm-kcm
   ];
 }
