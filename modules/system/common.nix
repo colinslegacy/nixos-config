@@ -7,7 +7,8 @@
 
 {
   imports = [
-    ./kde.nix
+    #./kde.nix
+    ./cosmic.nix
     ./virtualization.nix
     ./networking.nix
     ./services.nix

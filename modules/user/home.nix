@@ -61,6 +61,19 @@
       "x-scheme-handler/https" = "zen-beta.desktop";
       "x-scheme-handler/about" = "zen-beta.desktop";
       "x-scheme-handler/unknown" = "zen-beta.desktop";
+      "application/zip" = "file-roller.desktop";
+      "application/x-7z-compressed" = "file-roller.desktop";
+      "application/x-tar" = "file-roller.desktop";
+      "application/x-compressed-tar" = "file-roller.desktop";
+      "application/gzip" = "file-roller.desktop";
+      "application/x-bzip2" = "file-roller.desktop";
+      "application/x-bzip-compressed-tar" = "file-roller.desktop";
+      "application/x-xz" = "file-roller.desktop";
+      "application/x-xz-compressed-tar" = "file-roller.desktop";
+      "application/vnd.rar" = "file-roller.desktop";
+      "application/x-rar" = "file-roller.desktop";
+      "application/x-rar-compressed" = "file-roller.desktop";
+      "application/zstd" = "file-roller.desktop";
     };
   };
 

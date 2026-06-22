@@ -4,8 +4,9 @@
   inputs,
   ...
 }:
-
 {
+  imports = [ inputs.lazyvim.homeManagerModules.default ];
+  programs.lazyvim.enable = true;
   home.packages = with pkgs; [
     nixd
     bolt-launcher
@@ -58,18 +59,16 @@
     trash-cli
     wl-clipboard
     nix-init
-    bitwarden-desktop
     mullvad-vpn
     plexamp
     steamtinkerlaunch
     obsidian
     libreoffice-qt6-fresh
-    kdePackages.baloo
+    file-roller
     claude-code
     ollama-rocm
     plasma-panel-colorizer
     grc
     flyctl
-    inputs.nixvim-config.packages.${stdenv.hostPlatform.system}.default
   ];
 }

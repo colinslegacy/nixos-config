@@ -65,7 +65,7 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     nixpkgsStable.url = "nixpkgs/nixos-26.05";
     nix-gaming.url = "github:fufexan/nix-gaming";
-    nixvim-config.url = "github:colinslegacy/nixvim-config";
+    lazyvim.url = "github:pfassina/lazyvim-nix";
     nixcord.url = "github:kaylorben/nixcord";
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";

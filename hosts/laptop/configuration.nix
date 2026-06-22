@@ -14,7 +14,7 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ../../modules/system/common.nix
-    ./Wallpapers/sddm-wallpaper.nix
+    #./Wallpapers/sddm-wallpaper.nix
   ];
 
   # Bootloader.
